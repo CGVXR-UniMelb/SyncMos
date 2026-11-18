@@ -1,0 +1,108 @@
+{
+  "id": 2007,
+  "difficulty": "medium",
+  "tags": [
+    "dependency",
+    "waiting",
+    "medium",
+    "three_characters"
+  ],
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "sit down",
+    "wave",
+    "stand up",
+    "walk"
+  ],
+  "user_instruction": "Amir and Benjamin sit at a table. After both are seated, Charles waves to them from another table. After Charles waves, Amir and Benjamin stand up and walk to Charles.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "sit down at table"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "sit down at table"
+      },
+      {
+        "event_id": "e3",
+        "character": "Charles",
+        "activity": "wave to Amir and Benjamin"
+      },
+      {
+        "event_id": "e4",
+        "character": "Amir",
+        "activity": "stand up"
+      },
+      {
+        "event_id": "e5",
+        "character": "Benjamin",
+        "activity": "stand up"
+      },
+      {
+        "event_id": "e6",
+        "character": "Amir",
+        "activity": "walk to Charles"
+      },
+      {
+        "event_id": "e7",
+        "character": "Benjamin",
+        "activity": "walk to Charles"
+      }
+    ],
+    "dependencies": [
+      {
+        "parallel": [
+          "e1",
+          "e2"
+        ]
+      },
+      {
+        "after": "e1",
+        "before": "e3"
+      },
+      {
+        "after": "e2",
+        "before": "e3"
+      },
+      {
+        "after": "e3",
+        "before": "e4"
+      },
+      {
+        "after": "e3",
+        "before": "e5"
+      },
+      {
+        "parallel": [
+          "e4",
+          "e5"
+        ]
+      },
+      {
+        "after": "e4",
+        "before": "e6"
+      },
+      {
+        "after": "e5",
+        "before": "e7"
+      },
+      {
+        "parallel": [
+          "e6",
+          "e7"
+        ]
+      }
+    ]
+  }
+}

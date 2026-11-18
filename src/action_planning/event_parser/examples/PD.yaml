@@ -1,0 +1,54 @@
+scene_name: 4138585b-a238-2435-810b-9728fc989b2f # kitchen
+action_labels:
+  - idle
+  - walk
+  - pick up
+  - put down
+  - sit down
+  - stand up
+
+event:
+  characters: [Alice]
+  activity: put down the bottle on the table using left hand
+
+characters:
+  - name: Alice
+    state: interacting
+    current_action: pick up
+    position: 
+      - adjacent to table_1
+    orientation: 
+      - look at bottle_1
+
+previous_events:
+  - characters: [Alice]
+    activity: pick up the bottle from the table
+    state: done
+    parsed:
+      - character: Alice
+        target_action: pick up
+        position:
+          - adjacent to table_1
+        orientation:
+          - look at bottle_1
+
+response: |
+  ```python
+  def parse_event():
+    # Alice needs to put down the bottle on the table
+    alice = get_character("Alice")
+    
+    # Alice should remain adjacent to the table to put the bottle down
+    # Since she just picked it up from the table, she's already in the right position
+    alice_position = get_area_adjacent_to("table_1")
+    
+    # The target action is 'put down' from the available actions
+    alice_action = "put down"
+    
+    # Alice should look at the table where she's placing the bottle
+    alice.set_position(alice_position)
+    alice.set_orientation("table_1")
+    alice.set_target_action(alice_action)
+    
+    return [alice]
+  ```

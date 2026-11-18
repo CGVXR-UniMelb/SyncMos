@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: If you use SyncMos in your research, please cite our CVPR 2026 paper.
+title: SyncMos
+type: software
+authors:
+- given-names: Lingxiao
+  family-names: Li
+- given-names: Dongwon
+  family-names: Kim
+- given-names: Lingyan
+  family-names: Ruan
+- given-names: Bin
+  family-names: Chen
+- given-names: Taesoo
+  family-names: Kwon
+- given-names: Taehyun
+  family-names: Rhee
+repository-code: https://github.com/CGVXR-UniMelb/SyncMos
+preferred-citation:
+  type: conference-paper
+  title: 'SyncMos: Scalable Motion Synchronisation for Multi-Agent Scene Interaction'
+  authors:
+  - given-names: Lingxiao
+    family-names: Li
+  - given-names: Dongwon
+    family-names: Kim
+  - given-names: Lingyan
+    family-names: Ruan
+  - given-names: Bin
+    family-names: Chen
+  - given-names: Taesoo
+    family-names: Kwon
+  - given-names: Taehyun
+    family-names: Rhee
+  collection-title: Proceedings of the IEEE/CVF Conference on Computer Vision and
+    Pattern Recognition (CVPR)
+  year: 2026
+  month: 6
+  start: 8174
+  end: 8182
+  url: https://openaccess.thecvf.com/content/CVPR2026/html/Li_SyncMos_Scalable_Motion_Synchronisation_for_Multi-Agent_Scene_Interaction_CVPR_2026_paper.html

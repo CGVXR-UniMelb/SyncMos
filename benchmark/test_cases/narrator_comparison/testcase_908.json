@@ -1,0 +1,64 @@
+{
+  "id": 908,
+  "tags": [
+    "dependency",
+    "parallel_then_sequential"
+  ],
+  "scene_name": "House",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "drink"
+  ],
+  "user_instruction": "Amir and Benjamin sit down on chair_4 and chair_6 at the same time. After both are seated, Amir stands up, then Benjamin stands up.",
+  "characters": [
+    "Amir",
+    "Benjamin"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "sit down on chair_4"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "sit down on chair_6"
+      },
+      {
+        "event_id": "e3",
+        "character": "Amir",
+        "activity": "stand up from chair_4"
+      },
+      {
+        "event_id": "e4",
+        "character": "Benjamin",
+        "activity": "stand up from chair_6"
+      }
+    ],
+    "dependencies": [
+      {
+        "parallel": [
+          "e1",
+          "e2"
+        ]
+      },
+      {
+        "after": "e1",
+        "before": "e3"
+      },
+      {
+        "after": "e2",
+        "before": "e4"
+      },
+      {
+        "after": "e3",
+        "before": "e4"
+      }
+    ]
+  }
+}

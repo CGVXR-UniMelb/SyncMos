@@ -1,0 +1,44 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "sit down",
+    "read",
+    "type on",
+    "stand still"
+  ],
+  "user_instruction": "Amir sits on the sofa and reads a book. At the same time, Benjamin sits on a chair and types on the laptop.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin"
+  ],
+  "expected_next_event": {
+    "characters": [
+      "Amir",
+      "Benjamin"
+    ]
+  }
+}

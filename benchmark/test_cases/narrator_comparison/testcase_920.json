@@ -1,0 +1,66 @@
+{
+  "id": 920,
+  "tags": ["dependency", "restaurant", "service", "diamond", "multi_waiter"],
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "pick up", "put down", "walk back", "hand over", "receive", "turn on", "turn off"
+  ],
+  "user_instruction": "Amir picks up plate_1 from kitchen_counter_1 and walks forward to table_1. Benjamin picks up plate_2 from kitchen_counter_1 and walks forward to table_4. After both arrive, Amir puts down plate_1 on table_1 and Benjamin puts down plate_2 on table_4. Then both Amir and Benjamin walk back to kitchen_counter_1. After both return, Charles picks up bottle_1 from kitchen_counter_1.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "pick up plate_1 from kitchen_counter_1"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "pick up plate_2 from kitchen_counter_1"
+      },
+      {
+        "event_id": "e3",
+        "character": "Amir",
+        "activity": "put down plate_1 on table_1"
+      },
+      {
+        "event_id": "e4",
+        "character": "Benjamin",
+        "activity": "put down plate_2 on table_4"
+      },
+      {
+        "event_id": "e5",
+        "character": "Amir",
+        "activity": "walk back to kitchen_counter_1"
+      },
+      {
+        "event_id": "e6",
+        "character": "Benjamin",
+        "activity": "walk back to kitchen_counter_1"
+      },
+      {
+        "event_id": "e7",
+        "character": "Charles",
+        "activity": "pick up bottle_1 from kitchen_counter_1"
+      }
+    ],
+    "dependencies": [
+      { "after": "e1", "before": "e3" },
+      { "after": "e1", "before": "e4" },
+      { "after": "e2", "before": "e4" },
+      { "after": "e2", "before": "e3" },
+      { "after": "e3", "before": "e5" },
+      { "after": "e4", "before": "e6" },
+      { "after": "e5", "before": "e7" },
+      { "after": "e6", "before": "e7" }
+    ]
+  }
+}
+

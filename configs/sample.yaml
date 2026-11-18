@@ -1,0 +1,139 @@
+scene_name: "House"
+num_characters: 4
+device: "cuda"
+framerate: 30
+logging_level: "INFO"
+
+scene_describer:
+  model: "gpt-4o-2024-08-06"
+  provider: "openai"
+  temperature: 0.1
+  description_type: "narrative_timeline"
+  use_pregenerated_description: true
+  use_timeline_examples: true
+  use_examples: true
+  use_clustering: true
+  eps: 1.0
+  min_samples: 2
+  auto_save_descriptions: true
+  enable_cache: true
+  cache_dir: "cache/scene_describer"
+
+narrator:
+  type: "timeline"
+  model: "gpt-4o-2024-08-06"
+  provider: "openai"
+  temperature: 0.0
+  use_JSON_mode: true
+  use_examples: false
+  use_self_feedback: true
+  max_self_feedback_count: 3
+  additional_guidelines: ""
+  disable_event_based_planning: false
+  enable_cache: true
+  cache_dir: "cache/narrator"
+
+event_parser:
+  # Plan the timeline once and parse events in batches using scene grid coordinates.
+  type: "timeline"
+  parser_mode: "batch"  # "single" | "batch" | "timeline"
+  use_vision: true  # Include the overhead scene image in the request.
+  model: "gpt-4o-2024-08-06"
+  provider: "openai"
+  temperature: 0.0
+  use_JSON_mode: true
+  use_examples: false
+  use_self_feedback: true
+  max_self_feedback_count: 3
+  additional_guidelines: ""
+  disable_lcps: false
+  enable_cache: true
+  cache_dir: "cache/event_parser_timeline_batch"
+
+state_manager:
+  far_threshold: 0.3
+  near_threshold: 0.0
+  hsi_matching_start_distance: 0.0
+  hsi_matching_threshold: 0.0
+  hsi_matching_done_root_distance: 0.15
+  hsi_transition_done_delay: 20
+  hsi_grid_path_len_threshold: 6
+  height_threshold: 0.95
+  hhi_matching_start_distance: 2.0
+  hhi_matching_threshold: 1.0
+
+path_planner:
+  non_moving_cost: 0.7
+  min_planning_timesteps: 3
+  max_planning_timesteps: 100
+  oracle_timesteps: 150
+  collision_soft_threshold: 1.0
+  collision_hard_threshold: 1.5
+  soft_collision_cost: 0
+  hard_collision_cost: 10
+  collision_cost_scaler: 20
+
+scene_graph:
+  boundary_offset: 0.10
+  adjacent_threshold: 0.3
+  close_threshold: 1.0
+  relationship_xy_threshold: 2.0
+  relationship_z_threshold: 0.2
+  use_obj_positions: true
+  use_affordances: false
+
+position_sampler:
+  init_temperature: 1.0
+  final_temperature: 0.0001
+  cooling_rate: 0.9
+  cooling_interval: 1
+  move_std: 0.5
+  k: 1.0
+  r: 5.0
+  max_iter: 5000
+  convergence_threshold: 0.05
+  convergence_iteration: 20
+  avoidance_coefficient: 5.0
+  avoidance_threshold: 0.5
+  nearby_threshold: 1.5
+  multi_object_thresholds:
+    between:
+      aligned: 1.0
+      orthogonal: 0.5
+    aligned with:
+      aligned: 1.0
+      orthogonal: 0.3
+  distance_threshold:
+    on the side of: 0.5
+    adjacent to: 0.5
+    close to: 1.0
+  cost_weights:
+    directional: 1.0
+    distance: 1.0
+    multi_object: 1.0
+    interaction: 100.0
+    avoidance: 10.0
+    nearby: 1.0
+  collision_check_type: "cylinder"
+
+motion_matching:
+  motion_update_frequency: 42
+  halflife_transl: 0.05
+  halflife_global_orient: 0.05
+  halflife_pose: 0.3
+  halflife_walk: 0.5
+  halflife_hhi: 0.5
+  halflife_hsi: 0.2
+  halflife_idle: 0.3
+  future_offsets: [0.3, 0.6, 1.0]
+  pose_feature_dim: 166
+
+motion_db:
+  recreate_db: false
+
+misc:
+  minimum_distance: 0.6
+  root_height_offset: 0.2
+
+lingo_config_path: "configs/lingo"
+

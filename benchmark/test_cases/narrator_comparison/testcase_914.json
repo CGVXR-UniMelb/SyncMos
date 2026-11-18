@@ -1,0 +1,126 @@
+{
+  "id": 914,
+  "tags": [
+    "dependency",
+    "restaurant",
+    "complex",
+    "multi_customer"
+  ],
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "sit down",
+    "pick up",
+    "put down",
+    "hand over",
+    "receive",
+    "drink",
+    "stand up"
+  ],
+  "user_instruction": "Benjamin and Charles sit on chair_3 and chair_6 at table_4. Amir picks up bottle_1 and bottle_2 from bar_counter_1, then puts bottle_1 on table_4 near Benjamin and hands over bottle_2 to Charles. Benjamin and Charles drink from their bottles. After drinking, Benjamin stands up, then Charles stands up.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Benjamin",
+        "activity": "sit down on chair_3"
+      },
+      {
+        "event_id": "e2",
+        "character": "Charles",
+        "activity": "sit down on chair_6"
+      },
+      {
+        "event_id": "e3",
+        "character": "Amir",
+        "activity": "pick up bottle_1 from bar_counter_1"
+      },
+      {
+        "event_id": "e4",
+        "character": "Amir",
+        "activity": "pick up bottle_2 from bar_counter_1"
+      },
+      {
+        "event_id": "e5",
+        "character": "Amir",
+        "activity": "put down bottle_1 on table_4"
+      },
+      {
+        "event_id": "e6",
+        "character": "Amir",
+        "activity": "hand over bottle_2"
+      },
+      {
+        "event_id": "e7",
+        "character": "Charles",
+        "activity": "receive bottle_2"
+      },
+      {
+        "event_id": "e8",
+        "character": "Benjamin",
+        "activity": "drink from bottle_1"
+      },
+      {
+        "event_id": "e9",
+        "character": "Charles",
+        "activity": "drink from bottle_2"
+      },
+      {
+        "event_id": "e10",
+        "character": "Benjamin",
+        "activity": "stand up from chair_3"
+      },
+      {
+        "event_id": "e11",
+        "character": "Charles",
+        "activity": "stand up from chair_6"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e3",
+        "before": "e4"
+      },
+      {
+        "after": "e4",
+        "before": "e5"
+      },
+      {
+        "after": "e4",
+        "before": "e6"
+      },
+      {
+        "parallel": [
+          "e6",
+          "e7"
+        ]
+      },
+      {
+        "after": "e5",
+        "before": "e8"
+      },
+      {
+        "after": "e7",
+        "before": "e9"
+      },
+      {
+        "after": "e8",
+        "before": "e10"
+      },
+      {
+        "after": "e9",
+        "before": "e10"
+      },
+      {
+        "after": "e10",
+        "before": "e11"
+      }
+    ]
+  }
+}

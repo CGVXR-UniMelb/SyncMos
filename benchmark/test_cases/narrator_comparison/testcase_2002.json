@@ -1,0 +1,52 @@
+{
+  "id": 2002,
+  "difficulty": "simple",
+  "tags": [
+    "dependency",
+    "sequential",
+    "simple",
+    "two_characters"
+  ],
+  "scene_name": "Office",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "wave"
+  ],
+  "user_instruction": "Amir sits on a chair. After Amir sits down, Benjamin waves to Amir. Then Amir stands up.",
+  "characters": [
+    "Amir",
+    "Benjamin"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "sit down on chair"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "wave to Amir"
+      },
+      {
+        "event_id": "e3",
+        "character": "Amir",
+        "activity": "stand up from chair"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e1",
+        "before": "e2"
+      },
+      {
+        "after": "e2",
+        "before": "e3"
+      }
+    ]
+  }
+}

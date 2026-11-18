@@ -1,0 +1,133 @@
+{
+  "id": 902,
+  "tags": [
+    "OA"
+  ],
+  "scene_name": "House",
+  "action_labels": [
+    "bend forward",
+    "brush teeth",
+    "crawl",
+    "drink",
+    "eat",
+    "get up",
+    "kick",
+    "kneel down",
+    "lie down",
+    "listen to music",
+    "maintain bend",
+    "maintain kneel",
+    "maintain lie",
+    "maintain sit",
+    "maintain squat",
+    "pick up",
+    "play drums",
+    "play game",
+    "play guitar",
+    "play piano",
+    "punch",
+    "put down",
+    "read",
+    "rotate",
+    "sit down",
+    "squat down",
+    "stand still",
+    "stand up",
+    "straighten up",
+    "swing",
+    "take photo",
+    "take shower",
+    "talk on",
+    "toss",
+    "turn left",
+    "turn on",
+    "turn right",
+    "type on",
+    "wash",
+    "wave",
+    "write"
+  ],
+  "user_instruction": "Amir, Benjamin, Charles, and David sat on the same chair in the restaurant, one after another. Each of them sat on the chair alone, then left before the next person sat.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles",
+    "David"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "sit down on (chair_2 | chair_4 | chair_5 | chair_6) in the dining area"
+      },
+      {
+        "event_id": "e2",
+        "character": "Amir",
+        "activity": "stand up from (chair_2 | chair_4 | chair_5 | chair_6) in the dining area"
+      },
+      {
+        "event_id": "e3",
+        "character": "Benjamin",
+        "activity": "sit down on (chair_2 | chair_4 | chair_5 | chair_6) in the dining area"
+      },
+      {
+        "event_id": "e4",
+        "character": "Benjamin",
+        "activity": "stand up from (chair_2 | chair_4 | chair_5 | chair_6) in the dining area"
+      },
+      {
+        "event_id": "e5",
+        "character": "Charles",
+        "activity": "sit down on (chair_2 | chair_4 | chair_5 | chair_6) in the dining area"
+      },
+      {
+        "event_id": "e6",
+        "character": "Charles",
+        "activity": "stand up from (chair_2 | chair_4 | chair_5 | chair_6) in the dining area"
+      },
+      {
+        "event_id": "e7",
+        "character": "David",
+        "activity": "sit down on (chair_2 | chair_4 | chair_5 | chair_6) in the dining area"
+      },
+      {
+        "event_id": "e8",
+        "character": "David",
+        "activity": "stand up from (chair_2 | chair_4 | chair_5 | chair_6) in the dining area"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e1",
+        "before": "e2"
+      },
+      {
+        "after": "e2",
+        "before": "e3"
+      },
+      {
+        "after": "e3",
+        "before": "e4"
+      },
+      {
+        "after": "e4",
+        "before": "e5"
+      },
+      {
+        "after": "e5",
+        "before": "e6"
+      },
+      {
+        "after": "e6",
+        "before": "e7"
+      },
+      {
+        "after": "e7",
+        "before": "e8"
+      }
+    ]
+  }
+}

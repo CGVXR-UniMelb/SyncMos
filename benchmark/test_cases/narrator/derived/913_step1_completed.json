@@ -1,0 +1,45 @@
+{
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "sit down",
+    "pick up",
+    "hand over",
+    "receive",
+    "drink"
+  ],
+  "user_instruction": "Benjamin sits on chair_3. Amir picks up bottle_1 from bar_counter_1. After both are ready, Amir hands over bottle_1 to Benjamin. Then Benjamin drinks from bottle_1.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down on chair_3",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up bottle_1 from bar_counter_1",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin"
+  ],
+  "expected_next_event": {
+    "characters": [
+      "Amir",
+      "Benjamin"
+    ]
+  }
+}

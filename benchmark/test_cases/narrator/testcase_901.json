@@ -1,0 +1,45 @@
+{
+  "id": 901,
+  "tags": ["OA"],
+  "scene_name": "House",
+  "action_labels": [
+    "chat", "chat_single", "drink", "eat", "handshake", "hug", "idle", "sit",
+    "sit_partwise", "sit_transition_in", "sit_transition_out", "turn_off_record_player",
+    "turn_on_record_player", "use_coffee_maker", "use_laptop", "use_microwave",
+    "use_toaster", "vacuum_floor", "walk", "wave"
+  ],
+  "user_instruction": "Amir, Benjamin, Charles, and David sat on the same chair in the restaurant, one after another. Each of them sat on the chair alone, then left before the next person sat.",
+
+  "current_states": [
+    {
+      "name": "Amir",
+      "type": "actor",
+      "state": "idle",
+      "current_action": "idle",
+      "position": [],
+      "orientation": []
+    },
+    {
+      "name": "Benjamin",
+      "type": "actor",
+      "state": "idle",
+      "current_action": "idle",
+      "position": [],
+      "orientation": []
+    }
+  ],
+
+  "planning_history": [],
+
+  "expected_next_event": {
+    "character": "Amir",
+    "target_action": ["sit"]
+  },
+
+  "expected_timeline": {
+    "events": [],
+    "dependencies": []
+  }
+}
+
+

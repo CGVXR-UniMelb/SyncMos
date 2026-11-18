@@ -1,0 +1,91 @@
+{
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "eat",
+    "drink",
+    "wave"
+  ],
+  "user_instruction": "Amir, Benjamin, and Charles sit down at different tables simultaneously. They eat and drink at the same time. Then they wave to each other and stand up together.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "eat",
+      "details": []
+    },
+    {
+      "idx": 4,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "drink",
+      "details": []
+    },
+    {
+      "idx": 5,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "eat",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_next_event": {
+    "characters": [
+      "Amir",
+      "Benjamin",
+      "Charles"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "scene_name": "Office",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "type on",
+    "pick up"
+  ],
+  "user_instruction": "Amir sits on chair_1, types on laptop_1, then stands up. Benjamin sits on the same chair_1 and types on laptop_1.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down on chair_1",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "type on laptop_1",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "stand up from chair_1",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down on chair_1",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir"
+  ],
+  "expected_next_event": {}
+}

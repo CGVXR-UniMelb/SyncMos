@@ -1,0 +1,46 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "pick up",
+    "hand over",
+    "drink",
+    "eat",
+    "read",
+    "put down",
+    "wave",
+    "turn on",
+    "turn off",
+    "receive"
+  ],
+  "user_instruction": "Two parallel dependency chains that converge: Chain 1 - Amir picks up a bottle and hands it to Benjamin, Benjamin drinks and hands it to Charles. Chain 2 - At the same time, David picks up food and hands it to Evan, Evan eats and hands it to Charles. After Charles receives both items, Charles drinks from the bottle, eats the food, then waves. After Charles waves, everyone puts down items or stops their activities, and Amir turns off the lights.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "David"
+      ],
+      "activity": "pick up",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Benjamin",
+    "Charles",
+    "Evan"
+  ],
+  "expected_next_event": {}
+}

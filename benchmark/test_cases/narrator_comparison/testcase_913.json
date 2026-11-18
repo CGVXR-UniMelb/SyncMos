@@ -1,0 +1,73 @@
+{
+  "id": 913,
+  "tags": [
+    "dependency",
+    "restaurant",
+    "diamond",
+    "customer_waiter"
+  ],
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "sit down",
+    "pick up",
+    "hand over",
+    "receive",
+    "drink"
+  ],
+  "user_instruction": "Benjamin sits on chair_3. Amir picks up bottle_1 from bar_counter_1. After both are ready, Amir hands over bottle_1 to Benjamin. Then Benjamin drinks from bottle_1.",
+  "characters": [
+    "Amir",
+    "Benjamin"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Benjamin",
+        "activity": "sit down on chair_3"
+      },
+      {
+        "event_id": "e2",
+        "character": "Amir",
+        "activity": "pick up bottle_1 from bar_counter_1"
+      },
+      {
+        "event_id": "e3",
+        "character": "Amir",
+        "activity": "hand over bottle_1"
+      },
+      {
+        "event_id": "e4",
+        "character": "Benjamin",
+        "activity": "receive bottle_1"
+      },
+      {
+        "event_id": "e5",
+        "character": "Benjamin",
+        "activity": "drink from bottle_1"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e1",
+        "before": "e3"
+      },
+      {
+        "after": "e2",
+        "before": "e3"
+      },
+      {
+        "parallel": [
+          "e3",
+          "e4"
+        ]
+      },
+      {
+        "after": "e4",
+        "before": "e5"
+      }
+    ]
+  }
+}

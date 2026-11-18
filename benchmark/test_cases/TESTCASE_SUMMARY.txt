@@ -1,0 +1,120 @@
+================================================================================
+Complete statistics for new test cases
+================================================================================
+
+Total: 30 test cases (Synchronization 15 + Dependency 15)
+
+--------------------------------------------------------------------------------
+Statistics by category
+--------------------------------------------------------------------------------
+Synchronization (ID 1001-1015): 15 events
+  - Expected: Baseline ✓  Timeline ✓
+  - Features: Parallel events, multiple rounds of synchronization
+
+Dependency (ID 2001-2015): 15 events
+  - Expected: Baseline ✗  Timeline ✓
+  - Features: Complex dependency chains, causal relationships
+
+--------------------------------------------------------------------------------
+Statistics by difficulty
+--------------------------------------------------------------------------------
+                Synchronization, Dependency, Total
+Simple               5               5           10
+Medium               5               5           10
+Complex              5               5           10
+
+Simple  (ID 1001-1005, 2001-2005): Basic testing, 2-3 Humans, short chains
+Medium  (ID 1006-1010, 2006-2010): Medium testing, 3-4 Humans, medium chains
+Complex (ID 1011-1015, 2011-2015): Complex testing, 4-5 Humans, long chains/Multiple branches
+
+--------------------------------------------------------------------------------
+Statistics by scene
+--------------------------------------------------------------------------------
+                Synchronization, Dependency, Total
+House                 6               6           12
+Office                5               5           10
+Restaurant            4               4            8
+
+House      (Sync: 1001,1004,1007,1009,1012,1014 | Dep: 2001,2004,2006,2009,2012,2015)
+Office     (Sync: 1002,1005,1008,1011,1015 | Dep: 2002,2005,2008,2011,2014)
+Restaurant (Sync: 1003,1006,1010,1013 | Dep: 2003,2007,2010,2013)
+
+--------------------------------------------------------------------------------
+Statistics by number of characters
+--------------------------------------------------------------------------------
+                Synchronization, Dependency, Total
+2 people                   3               3            6
+3 people                   4               5            9
+4 people                   4               3            7
+5 people                   4               4            8
+
+2 People (Sync: 1001,1002,1004 | Dep: 2001,2002,2004)
+3 People (Sync: 1003,1005,1006,1009 | Dep: 2003,2005,2006,2007,2009)
+4 people (Sync: 1007,1008,1010,1014 | Dep: 2008,2010,2013)
+5 people (Sync: 1011,1012,1013,1015 | Dep: 2011,2012,2014,2015)
+
+--------------------------------------------------------------------------------
+Detailed list - Synchronization
+--------------------------------------------------------------------------------
+ID Difficulty Scene Number of Characters Description
+1001 Simple House 2 Two individuals: reading&Typing
+1002 Simple Office 2 Two individuals: drinking coffee&Typing
+1003 Simple Restaurant 3 Three people: eating, drinking water, reading menus
+1004 Simple House 2 Two individuals: listening to music&Watching TV
+1005  Simple    Office      3      Three people working together: typing, making calls, reading documents
+1006  Medium    Restaurant  3      Multiple people working synchronously: sitting down, eating, waving hands, standing up
+1007  Medium    House       4      Four people practicing a band (guitar, piano, drums, audience)
+1008  Medium    Office      4      Four people working synchronously
+1009  Medium    House       3      Three people handling items-Usage-Waving hands-Putting down
+1010  Medium    Restaurant  4      Four people working synchronously across two tables
+1011  Complex   Office      5      Five people working synchronously
+1012  Complex   House       5      Five people working in three rounds
+1013  Complex   Restaurant  5      Five people working in four rounds
+1014  Complex   House       4      Four people working in six rounds
+1015  Complex   Office      5      Five people working complex tasks
+
+--------------------------------------------------------------------------------
+Detailed list - Dependency
+--------------------------------------------------------------------------------
+ID Difficulty Scene Number of Characters Description
+2001  Simple    House       2      Simple Transfer: Amir→Benjamin
+2002  Simple    Office      2      Observation-Reaction Chain
+2003  Simple    Restaurant  3      Shared Chair: Three people use it in turn
+2004  Simple    House       2      Conditional Dependency: Lighting on→Reading→Turning off the light
+2005  Simple    Office      3      File Transfer Chain: 3 people
+2006  Medium    House       3      Transfer-Drinking water-Transfer Chain
+2007  Medium    Restaurant  3      Waiting and Coordination
+2008  Medium    Office      4      The four-person file transfer chain
+2009  Medium    House       3      Multiple conditions depend on
+2010  Medium    Restaurant  4      Sequence Coordination: We’ll move in step
+2011  Complex   Office      5      Document approval chain: 5 People read-Signature-Pass
+2012  Complex   House       5      Multiple dependence: Parallel chains converge
+2013  Complex   Restaurant  4      Loop Transfer: Two cycles
+2014  Complex   Office      5      Branch Dependence: Branch-Gathering
+2015  Complex   House       5      Double-chain convergence: The two chains converged into the same person
+
+--------------------------------------------------------------------------------
+Run Command Quick Reference
+--------------------------------------------------------------------------------
+
+# Synchronization testing
+./scripts/run_synchronization_tests.sh all         # All 15
+./scripts/run_synchronization_tests.sh simple      # Simple 5
+./scripts/run_synchronization_tests.sh medium      # Medium 5
+./scripts/run_synchronization_tests.sh complex     # Complex 5
+./scripts/run_synchronization_tests.sh house       # House scene 6
+./scripts/run_synchronization_tests.sh 2char       # 2-person test 3
+
+# Dependency testing
+./scripts/run_dependency_tests.sh all              # All 15
+./scripts/run_dependency_tests.sh simple           # Simple 5
+./scripts/run_dependency_tests.sh medium           # Medium 5
+./scripts/run_dependency_tests.sh complex          # Complex 5
+./scripts/run_dependency_tests.sh house            # House scene 6
+./scripts/run_dependency_tests.sh 3char            # 3-person test 5
+
+# Specified configuration
+./scripts/run_synchronization_tests.sh simple 4o
+./scripts/run_dependency_tests.sh complex 4o_mini --narrator-types timeline
+
+================================================================================

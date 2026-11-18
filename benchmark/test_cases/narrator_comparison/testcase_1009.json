@@ -1,0 +1,156 @@
+{
+  "id": 1009,
+  "difficulty": "medium",
+  "tags": [
+    "synchronization",
+    "parallel",
+    "medium",
+    "three_characters"
+  ],
+  "scene_name": "House",
+  "action_labels": [
+    "pick up",
+    "drink",
+    "eat",
+    "put down",
+    "wave"
+  ],
+  "user_instruction": "Amir picks up a bottle and drinks, Benjamin picks up food and eats, Charles picks up a book and reads. All three do their activities simultaneously. Then they wave to each other and put down their items at the same time.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "pick up bottle"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "pick up food"
+      },
+      {
+        "event_id": "e3",
+        "character": "Charles",
+        "activity": "pick up book"
+      },
+      {
+        "event_id": "e4",
+        "character": "Amir",
+        "activity": "drink from bottle"
+      },
+      {
+        "event_id": "e5",
+        "character": "Benjamin",
+        "activity": "eat food"
+      },
+      {
+        "event_id": "e6",
+        "character": "Charles",
+        "activity": "read book"
+      },
+      {
+        "event_id": "e7",
+        "character": "Amir",
+        "activity": "wave"
+      },
+      {
+        "event_id": "e8",
+        "character": "Benjamin",
+        "activity": "wave"
+      },
+      {
+        "event_id": "e9",
+        "character": "Charles",
+        "activity": "wave"
+      },
+      {
+        "event_id": "e10",
+        "character": "Amir",
+        "activity": "put down bottle"
+      },
+      {
+        "event_id": "e11",
+        "character": "Benjamin",
+        "activity": "put down food"
+      },
+      {
+        "event_id": "e12",
+        "character": "Charles",
+        "activity": "put down book"
+      }
+    ],
+    "dependencies": [
+      {
+        "parallel": [
+          "e1",
+          "e2",
+          "e3"
+        ]
+      },
+      {
+        "after": "e1",
+        "before": "e4"
+      },
+      {
+        "after": "e2",
+        "before": "e5"
+      },
+      {
+        "after": "e3",
+        "before": "e6"
+      },
+      {
+        "parallel": [
+          "e4",
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "after": "e4",
+        "before": "e7"
+      },
+      {
+        "after": "e5",
+        "before": "e8"
+      },
+      {
+        "after": "e6",
+        "before": "e9"
+      },
+      {
+        "parallel": [
+          "e7",
+          "e8",
+          "e9"
+        ]
+      },
+      {
+        "after": "e7",
+        "before": "e10"
+      },
+      {
+        "after": "e8",
+        "before": "e11"
+      },
+      {
+        "after": "e9",
+        "before": "e12"
+      },
+      {
+        "parallel": [
+          "e10",
+          "e11",
+          "e12"
+        ]
+      }
+    ]
+  }
+}

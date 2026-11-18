@@ -1,0 +1,21 @@
+{
+  "id": 1004,
+  "difficulty": "simple",
+  "tags": ["synchronization", "parallel", "simple", "two_characters"],
+  "scene_name": "House",
+  "action_labels": ["listen to music", "watch tv", "stand still"],
+  "user_instruction": "Amir listens to music in the living room while Benjamin watches TV. Both activities happen at the same time.",
+  "characters": ["Amir", "Benjamin"],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {"event_id": "e1", "character": "Amir", "activity": "listen"},
+      {"event_id": "e2", "character": "Benjamin", "activity": "watch"}
+    ],
+    "dependencies": [
+      {"parallel": ["e1", "e2"]}
+    ]
+  }
+}
+

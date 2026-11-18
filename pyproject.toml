@@ -1,0 +1,124 @@
+[project]
+name = "syncmos"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "torchaudio",
+    "torchvision",
+    "tqdm==4.67.1",
+    "trimesh",
+    "embreex; sys_platform == 'linux' or sys_platform == 'win32'",
+    "polyscope",
+    "python-dotenv",
+    "omegaconf==2.3.0",
+    "openai",
+    "pandas",
+    "scikit-learn",
+    "matplotlib",
+    "smplx==0.1.28",
+    "huggingface-hub",
+    "rtree",
+    "debugpy>=1.8.16",
+    "absl-py==2.1.0",
+    "antlr4-python3-runtime==4.9.3",
+    "cachetools==5.5.0",
+    "certifi==2024.12.14",
+    "charset-normalizer==3.4.0",
+    "clip",
+    "dtw-python==1.5.3",
+    "einops==0.8.0",
+    "ftfy==6.2.3",
+    "google-auth==2.37.0",
+    "google-auth-oauthlib==1.0.0",
+    "grpcio==1.68.1",
+    "hydra-core==1.3.2",
+    "idna==3.10",
+    "importlib-metadata==8.5.0",
+    "importlib-resources==6.4.5",
+    "markdown==3.7",
+    "markupsafe==2.1.5",
+    "numpy==1.26.4",
+    "oauthlib==3.2.2",
+    "opencv-python==4.10.0.84",
+    "packaging==24.2",
+    "pathfinding==1.0.16",
+    "pillow==10.4.0",
+    "protobuf==5.29.2",
+    "pyasn1==0.6.1",
+    "pyasn1-modules==0.4.1",
+    "pyyaml==6.0.2",
+    "regex==2024.11.6",
+    "requests==2.32.3",
+    "requests-oauthlib==2.0.0",
+    "rsa==4.9",
+    "scipy>=1.15.3",
+    "six==1.17.0",
+    "tensorboard==2.14.0",
+    "tensorboard-data-server==0.7.2",
+    "typing-extensions==4.12.2",
+    "urllib3==2.2.3",
+    "vit-pytorch==1.6.5",
+    "wcwidth==0.2.13",
+    "werkzeug==3.0.6",
+    "zipp==3.20.2",
+    "imageio>=2.37.0",
+    "imageio-ffmpeg>=0.6.0",
+]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cuda", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+  { index = "pytorch-cpu", marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
+]
+torchvision = [
+  { index = "pytorch-cuda", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+  { index = "pytorch-cpu", marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
+]
+torchaudio = [
+  { index = "pytorch-cuda", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+  { index = "pytorch-cpu", marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
+]
+clip = { git = "https://github.com/openai/CLIP.git", rev = "dcba3cb2e2827b402d2701e7e1c7d9fed8a20ef1" }
+
+[tool.uv.extra-build-dependencies]
+# This pinned CLIP revision imports pkg_resources in setup.py.
+clip = ["setuptools==80.9.0"]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cuda"
+url = "https://download.pytorch.org/whl/cu129"  # change to the appropriate CUDA version if needed
+explicit = true
+
+[dependency-groups]
+dev = [
+    "pdbpp>=0.11.7",
+]
+
+# Matches the official Event-Driven-Storytelling source at 98edca9.
+# Run independently of the CUDA environment: uvx black==26.10.1 .
+[tool.black]
+line-length = 120
+target-version = ["py310"]
+required-version = "26.10.1"
+include = '\.py$'
+
+# Lint independently of runtime dependencies: uvx ruff==0.17.2 check .
+[tool.ruff]
+required-version = "0.17.2"
+target-version = "py310"
+line-length = 120
+include = ["*.py", "pyproject.toml"]
+
+[tool.ruff.lint]
+select = ["E9", "F"]
+# Import removal needs a side-effect/public API review; local fixes stay explicit.
+unfixable = ["F401", "F841"]
+

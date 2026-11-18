@@ -1,0 +1,156 @@
+{
+  "id": 1006,
+  "difficulty": "medium",
+  "tags": [
+    "synchronization",
+    "parallel",
+    "medium",
+    "three_characters"
+  ],
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "eat",
+    "drink",
+    "wave"
+  ],
+  "user_instruction": "Amir, Benjamin, and Charles sit down at different tables simultaneously. They eat and drink at the same time. Then they wave to each other and stand up together.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "sit down at table"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "sit down at table"
+      },
+      {
+        "event_id": "e3",
+        "character": "Charles",
+        "activity": "sit down at table"
+      },
+      {
+        "event_id": "e4",
+        "character": "Amir",
+        "activity": "eat food"
+      },
+      {
+        "event_id": "e5",
+        "character": "Benjamin",
+        "activity": "drink water"
+      },
+      {
+        "event_id": "e6",
+        "character": "Charles",
+        "activity": "eat food"
+      },
+      {
+        "event_id": "e7",
+        "character": "Amir",
+        "activity": "wave to others"
+      },
+      {
+        "event_id": "e8",
+        "character": "Benjamin",
+        "activity": "wave to others"
+      },
+      {
+        "event_id": "e9",
+        "character": "Charles",
+        "activity": "wave to others"
+      },
+      {
+        "event_id": "e10",
+        "character": "Amir",
+        "activity": "stand up"
+      },
+      {
+        "event_id": "e11",
+        "character": "Benjamin",
+        "activity": "stand up"
+      },
+      {
+        "event_id": "e12",
+        "character": "Charles",
+        "activity": "stand up"
+      }
+    ],
+    "dependencies": [
+      {
+        "parallel": [
+          "e1",
+          "e2",
+          "e3"
+        ]
+      },
+      {
+        "after": "e1",
+        "before": "e4"
+      },
+      {
+        "after": "e2",
+        "before": "e5"
+      },
+      {
+        "after": "e3",
+        "before": "e6"
+      },
+      {
+        "parallel": [
+          "e4",
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "after": "e4",
+        "before": "e7"
+      },
+      {
+        "after": "e5",
+        "before": "e8"
+      },
+      {
+        "after": "e6",
+        "before": "e9"
+      },
+      {
+        "parallel": [
+          "e7",
+          "e8",
+          "e9"
+        ]
+      },
+      {
+        "after": "e7",
+        "before": "e10"
+      },
+      {
+        "after": "e8",
+        "before": "e11"
+      },
+      {
+        "after": "e9",
+        "before": "e12"
+      },
+      {
+        "parallel": [
+          "e10",
+          "e11",
+          "e12"
+        ]
+      }
+    ]
+  }
+}

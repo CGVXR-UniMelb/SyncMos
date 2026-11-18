@@ -1,0 +1,53 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "pick up",
+    "hand over",
+    "put down",
+    "receive"
+  ],
+  "user_instruction": "Amir picks up a bottle and hands it over to Benjamin. Benjamin then puts the bottle down.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "hand over",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "receive",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin"
+  ],
+  "expected_next_event": {
+    "character": "Benjamin",
+    "activity": "put down"
+  }
+}

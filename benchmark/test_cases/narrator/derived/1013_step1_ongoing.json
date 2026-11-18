@@ -1,0 +1,72 @@
+{
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "sit down",
+    "eat",
+    "drink",
+    "wave",
+    "talk on",
+    "read",
+    "stand up"
+  ],
+  "user_instruction": "Five customers arrive at the restaurant and sit at different tables simultaneously. Each performs different activities: Amir eats and drinks, Benjamin talks on phone and waves, Charles reads menu and eats, David drinks and waves, Evan eats and talks on phone. After their meals, all five stand up at the same time.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "David"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 4,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Evan"
+      ],
+      "activity": "sit down",
+      "details": []
+    }
+  ],
+  "available_characters": [],
+  "expected_next_event": {}
+}

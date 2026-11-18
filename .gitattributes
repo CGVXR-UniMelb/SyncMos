@@ -1,0 +1,2 @@
+# Keep source/config/prompt hashes stable on Windows and Linux.
+* text=auto eol=lf

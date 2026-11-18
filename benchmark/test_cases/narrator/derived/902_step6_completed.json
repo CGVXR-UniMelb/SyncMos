@@ -1,0 +1,125 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "bend forward",
+    "brush teeth",
+    "crawl",
+    "drink",
+    "eat",
+    "get up",
+    "kick",
+    "kneel down",
+    "lie down",
+    "listen to music",
+    "maintain bend",
+    "maintain kneel",
+    "maintain lie",
+    "maintain sit",
+    "maintain squat",
+    "pick up",
+    "play drums",
+    "play game",
+    "play guitar",
+    "play piano",
+    "punch",
+    "put down",
+    "read",
+    "rotate",
+    "sit down",
+    "squat down",
+    "stand still",
+    "stand up",
+    "straighten up",
+    "swing",
+    "take photo",
+    "take shower",
+    "talk on",
+    "toss",
+    "turn left",
+    "turn on",
+    "turn right",
+    "type on",
+    "wash",
+    "wave",
+    "write"
+  ],
+  "user_instruction": "Amir, Benjamin, Charles, and David sat on the same chair in the restaurant, one after another. Each of them sat on the chair alone, then left before the next person sat.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down on chair_2 in the dining area",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "stand up from chair_2 in the dining area",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down on chair_2 in the dining area",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "stand up from chair_2 in the dining area",
+      "details": []
+    },
+    {
+      "idx": 4,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "sit down on chair_2 in the dining area",
+      "details": []
+    },
+    {
+      "idx": 5,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "stand up from chair_2 in the dining area",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin",
+    "Charles",
+    "David"
+  ],
+  "expected_next_event": {
+    "character": "David",
+    "activity": "sit down on (chair_2 | chair_4 | chair_5 | chair_6) in the dining area"
+  }
+}

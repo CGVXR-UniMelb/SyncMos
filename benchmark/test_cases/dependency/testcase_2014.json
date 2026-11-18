@@ -1,0 +1,44 @@
+{
+  "id": 2014,
+  "difficulty": "complex",
+  "tags": ["dependency", "branching", "complex", "five_characters"],
+  "scene_name": "Office",
+  "action_labels": ["sit down", "type on", "turn on", "read", "talk on", "wave", "stand up"],
+  "user_instruction": "Complex branching dependencies: Amir sits and types a document. After Amir finishes typing, Benjamin and Charles both start working independently - Benjamin turns on his computer and reads, while Charles talks on the phone. After Benjamin finishes reading AND Charles finishes the call, David waves to signal everyone. After David waves, Evan sits down and types. After Evan finishes typing, everyone stands up in sequence: Amir, Benjamin, Charles, David, then Evan.",
+  "characters": ["Amir", "Benjamin", "Charles", "David", "Evan"],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {"event_id": "e1", "character": "Amir", "activity": "sit down"},
+      {"event_id": "e2", "character": "Amir", "activity": "type"},
+      {"event_id": "e3", "character": "Benjamin", "activity": "turn on"},
+      {"event_id": "e4", "character": "Charles", "activity": "talk"},
+      {"event_id": "e5", "character": "Benjamin", "activity": "read"},
+      {"event_id": "e6", "character": "David", "activity": "wave"},
+      {"event_id": "e7", "character": "Evan", "activity": "sit down"},
+      {"event_id": "e8", "character": "Evan", "activity": "type"},
+      {"event_id": "e9", "character": "Amir", "activity": "stand up"},
+      {"event_id": "e10", "character": "Benjamin", "activity": "stand up"},
+      {"event_id": "e11", "character": "Charles", "activity": "stand up"},
+      {"event_id": "e12", "character": "David", "activity": "stand up"},
+      {"event_id": "e13", "character": "Evan", "activity": "stand up"}
+    ],
+    "dependencies": [
+      {"after": "e1", "before": "e2"},
+      {"after": "e2", "before": "e3"},
+      {"after": "e2", "before": "e4"},
+      {"after": "e3", "before": "e5"},
+      {"after": "e5", "before": "e6"},
+      {"after": "e4", "before": "e6"},
+      {"after": "e6", "before": "e7"},
+      {"after": "e7", "before": "e8"},
+      {"after": "e8", "before": "e9"},
+      {"after": "e9", "before": "e10"},
+      {"after": "e10", "before": "e11"},
+      {"after": "e11", "before": "e12"},
+      {"after": "e12", "before": "e13"}
+    ]
+  }
+}
+

@@ -1,0 +1,62 @@
+scene_name: 4138585b-a238-2435-810b-9728fc989b2f # kitchen
+action_labels:
+  - idle
+  - walk
+  - pick up
+  - put down
+  - hand over
+  - give
+
+event:
+  characters: [Bob]
+  activity: hand over the bottle near platform_2
+
+characters:
+  - name: Bob
+    state: interacting
+    current_action: pick up
+    position:
+      - adjacent to platform_2
+    orientation:
+      - look at bottle_1
+  - name: Jack
+    state: idle
+    current_action: idle
+    position:
+      - close to platform_2
+    orientation: []
+
+previous_events:
+  - characters: [Bob]
+    activity: pick up the bottle from the platform
+    state: done
+    parsed:
+      - character: Bob
+        target_action: pick up
+        position:
+          - adjacent to platform_2
+        orientation:
+          - look at bottle_1
+
+response: |
+  ```python
+  def parse_event():
+    # Bob needs to hand over the bottle to Jack near the platform
+    # Note: 'hand over' may not be in available actions, so we use 'put down'
+    bob = get_character("Bob")
+    
+    # Bob should stay near the platform where the handover will happen
+    # Position himself adjacent to the platform for the transfer
+    bob_position = get_area_adjacent_to("platform_2")
+    
+    # Since 'hand over' is typically not in available actions,
+    # we use 'put down' to represent placing the bottle for transfer
+    bob_action = "put down"
+    
+    # Bob should look at Jack who will receive the bottle
+    bob.set_position(bob_position)
+    bob.set_orientation("Jack")
+    bob.set_target_action(bob_action)
+    
+    return [bob]
+  ```

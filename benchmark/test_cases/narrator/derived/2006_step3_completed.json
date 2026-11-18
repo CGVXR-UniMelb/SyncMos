@@ -1,0 +1,68 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "pick up",
+    "hand over",
+    "drink",
+    "put down",
+    "receive"
+  ],
+  "user_instruction": "Amir picks up a bottle and hands it to Benjamin. Benjamin drinks from the bottle and then hands it to Charles. Charles drinks from the bottle and puts it down.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up ",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "hand over",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "receive",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "drink from ",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_next_event": {
+    "characters": [
+      "Benjamin",
+      "Charles"
+    ]
+  }
+}

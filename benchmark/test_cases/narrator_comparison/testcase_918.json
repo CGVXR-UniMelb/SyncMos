@@ -1,0 +1,91 @@
+{
+  "id": 918,
+  "tags": [
+    "dependency",
+    "house",
+    "posture",
+    "sequential",
+    "exercise"
+  ],
+  "scene_name": "House",
+  "action_labels": [
+    "stand still",
+    "bend forward",
+    "straighten up",
+    "kneel down",
+    "get up",
+    "squat down",
+    "stand up"
+  ],
+  "user_instruction": "Amir stands still, then bends forward. After bending, Amir straightens up, then kneels down. After kneeling, Amir gets up, then squats down. Finally, Amir stands up.",
+  "characters": [
+    "Amir"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "stand still"
+      },
+      {
+        "event_id": "e2",
+        "character": "Amir",
+        "activity": "bend forward"
+      },
+      {
+        "event_id": "e3",
+        "character": "Amir",
+        "activity": "straighten up"
+      },
+      {
+        "event_id": "e4",
+        "character": "Amir",
+        "activity": "kneel down"
+      },
+      {
+        "event_id": "e5",
+        "character": "Amir",
+        "activity": "get up"
+      },
+      {
+        "event_id": "e6",
+        "character": "Amir",
+        "activity": "squat down"
+      },
+      {
+        "event_id": "e7",
+        "character": "Amir",
+        "activity": "stand up"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e1",
+        "before": "e2"
+      },
+      {
+        "after": "e2",
+        "before": "e3"
+      },
+      {
+        "after": "e3",
+        "before": "e4"
+      },
+      {
+        "after": "e4",
+        "before": "e5"
+      },
+      {
+        "after": "e5",
+        "before": "e6"
+      },
+      {
+        "after": "e6",
+        "before": "e7"
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": 911,
+  "tags": [
+    "dependency",
+    "office",
+    "fork",
+    "work_distribution"
+  ],
+  "scene_name": "Office",
+  "action_labels": [
+    "sit down",
+    "type on"
+  ],
+  "user_instruction": "Amir sits on chair_10. After Amir is seated, Benjamin sits on chair_12 and Charles sits on chair_14. Then Benjamin and Charles start typing on laptop_6 and laptop_5.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "sit down on chair_10"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "sit down on chair_12"
+      },
+      {
+        "event_id": "e3",
+        "character": "Charles",
+        "activity": "sit down on chair_14"
+      },
+      {
+        "event_id": "e4",
+        "character": "Benjamin",
+        "activity": "type on laptop_6"
+      },
+      {
+        "event_id": "e5",
+        "character": "Charles",
+        "activity": "type on laptop_5"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e1",
+        "before": "e2"
+      },
+      {
+        "after": "e1",
+        "before": "e3"
+      },
+      {
+        "after": "e2",
+        "before": "e4"
+      },
+      {
+        "after": "e3",
+        "before": "e5"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "turn on",
+    "read",
+    "turn off"
+  ],
+  "user_instruction": "Amir turns on the light. After the light is on, Benjamin reads a book. After Benjamin finishes reading, Amir turns off the light.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "turn on ",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Benjamin"
+  ],
+  "expected_next_event": {}
+}

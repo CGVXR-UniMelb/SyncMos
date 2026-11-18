@@ -1,0 +1,198 @@
+{
+  "scene_name": "Office",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "type on",
+    "talk on",
+    "read",
+    "wave",
+    "drink",
+    "turn on",
+    "turn off"
+  ],
+  "user_instruction": "Five office workers coordinate a synchronized workflow. Each person sits down, performs their primary task (Amir types, Benjamin talks on phone, Charles reads, David drinks coffee, Evan waves), takes a break to wave to others, resumes their task, then all turn off their devices/put down items and stand up simultaneously.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "David"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 4,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Evan"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 5,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Evan"
+      ],
+      "activity": "wave",
+      "details": []
+    },
+    {
+      "idx": 6,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "type",
+      "details": []
+    },
+    {
+      "idx": 7,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "talk",
+      "details": []
+    },
+    {
+      "idx": 8,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "read",
+      "details": []
+    },
+    {
+      "idx": 9,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "David"
+      ],
+      "activity": "drink",
+      "details": []
+    },
+    {
+      "idx": 10,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "wave",
+      "details": []
+    },
+    {
+      "idx": 11,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "wave",
+      "details": []
+    },
+    {
+      "idx": 12,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "wave",
+      "details": []
+    },
+    {
+      "idx": 13,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "David"
+      ],
+      "activity": "wave",
+      "details": []
+    },
+    {
+      "idx": 14,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Evan"
+      ],
+      "activity": "wave",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin",
+    "Charles",
+    "David",
+    "Evan"
+  ],
+  "expected_next_event": {
+    "characters": [
+      "Amir",
+      "Evan",
+      "Charles",
+      "Benjamin",
+      "David"
+    ]
+  }
+}

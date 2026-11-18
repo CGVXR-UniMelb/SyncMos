@@ -1,0 +1,22 @@
+{
+  "id": 1003,
+  "difficulty": "simple",
+  "tags": ["synchronization", "parallel", "simple", "three_characters"],
+  "scene_name": "Restaurant",
+  "action_labels": ["eat", "drink", "read"],
+  "user_instruction": "In the restaurant, Amir eats food, Benjamin drinks water, and Charles reads the menu. All three do their activities at the same time.",
+  "characters": ["Amir", "Benjamin", "Charles"],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {"event_id": "e1", "character": "Amir", "activity": "eat"},
+      {"event_id": "e2", "character": "Benjamin", "activity": "drink"},
+      {"event_id": "e3", "character": "Charles", "activity": "read"}
+    ],
+    "dependencies": [
+      {"parallel": ["e1", "e2", "e3"]}
+    ]
+  }
+}
+

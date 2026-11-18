@@ -1,0 +1,90 @@
+{
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "sit down",
+    "pick up",
+    "put down",
+    "hand over",
+    "receive",
+    "drink",
+    "stand up"
+  ],
+  "user_instruction": "Benjamin and Charles sit on chair_3 and chair_6 at table_4. Amir picks up bottle_1 and bottle_2 from bar_counter_1, then puts bottle_1 on table_4 near Benjamin and hands over bottle_2 to Charles. Benjamin and Charles drink from their bottles. After drinking, Benjamin stands up, then Charles stands up.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down on chair_3",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "sit down on chair_6",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up bottle_1 from bar_counter_1",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up bottle_2 from bar_counter_1",
+      "details": []
+    },
+    {
+      "idx": 4,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "hand over bottle_2",
+      "details": []
+    },
+    {
+      "idx": 5,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "receive bottle_2",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_next_event": {
+    "character": "Charles",
+    "activity": "drink from bottle_2"
+  }
+}

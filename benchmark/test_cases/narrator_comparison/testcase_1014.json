@@ -1,0 +1,285 @@
+{
+  "id": 1014,
+  "difficulty": "complex",
+  "tags": [
+    "synchronization",
+    "parallel",
+    "complex",
+    "four_characters"
+  ],
+  "scene_name": "House",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "pick up",
+    "put down",
+    "drink",
+    "eat",
+    "read",
+    "type on",
+    "wave"
+  ],
+  "user_instruction": "Four people coordinate complex parallel activities. Amir sits, picks up bottle, drinks, puts down, waves, and stands. Benjamin sits, picks up food, eats, puts down, waves, and stands. Charles sits, picks up book, reads, puts down, waves, and stands. David sits, types on laptop, stops typing, waves, and stands. All corresponding actions happen simultaneously across all four people.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles",
+    "David"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "sit down"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "sit down"
+      },
+      {
+        "event_id": "e3",
+        "character": "Charles",
+        "activity": "sit down"
+      },
+      {
+        "event_id": "e4",
+        "character": "David",
+        "activity": "sit down"
+      },
+      {
+        "event_id": "e5",
+        "character": "Amir",
+        "activity": "pick up bottle"
+      },
+      {
+        "event_id": "e6",
+        "character": "Benjamin",
+        "activity": "pick up food"
+      },
+      {
+        "event_id": "e7",
+        "character": "Charles",
+        "activity": "pick up book"
+      },
+      {
+        "event_id": "e8",
+        "character": "David",
+        "activity": "start typing on laptop"
+      },
+      {
+        "event_id": "e9",
+        "character": "Amir",
+        "activity": "drink from bottle"
+      },
+      {
+        "event_id": "e10",
+        "character": "Benjamin",
+        "activity": "eat food"
+      },
+      {
+        "event_id": "e11",
+        "character": "Charles",
+        "activity": "read book"
+      },
+      {
+        "event_id": "e12",
+        "character": "David",
+        "activity": "continue typing"
+      },
+      {
+        "event_id": "e13",
+        "character": "Amir",
+        "activity": "put down bottle"
+      },
+      {
+        "event_id": "e14",
+        "character": "Benjamin",
+        "activity": "put down food"
+      },
+      {
+        "event_id": "e15",
+        "character": "Charles",
+        "activity": "put down book"
+      },
+      {
+        "event_id": "e16",
+        "character": "David",
+        "activity": "stop typing"
+      },
+      {
+        "event_id": "e17",
+        "character": "Amir",
+        "activity": "wave"
+      },
+      {
+        "event_id": "e18",
+        "character": "Benjamin",
+        "activity": "wave"
+      },
+      {
+        "event_id": "e19",
+        "character": "Charles",
+        "activity": "wave"
+      },
+      {
+        "event_id": "e20",
+        "character": "David",
+        "activity": "wave"
+      },
+      {
+        "event_id": "e21",
+        "character": "Amir",
+        "activity": "stand up"
+      },
+      {
+        "event_id": "e22",
+        "character": "Benjamin",
+        "activity": "stand up"
+      },
+      {
+        "event_id": "e23",
+        "character": "Charles",
+        "activity": "stand up"
+      },
+      {
+        "event_id": "e24",
+        "character": "David",
+        "activity": "stand up"
+      }
+    ],
+    "dependencies": [
+      {
+        "parallel": [
+          "e1",
+          "e2",
+          "e3",
+          "e4"
+        ]
+      },
+      {
+        "after": "e1",
+        "before": "e5"
+      },
+      {
+        "after": "e2",
+        "before": "e6"
+      },
+      {
+        "after": "e3",
+        "before": "e7"
+      },
+      {
+        "after": "e4",
+        "before": "e8"
+      },
+      {
+        "parallel": [
+          "e5",
+          "e6",
+          "e7",
+          "e8"
+        ]
+      },
+      {
+        "after": "e5",
+        "before": "e9"
+      },
+      {
+        "after": "e6",
+        "before": "e10"
+      },
+      {
+        "after": "e7",
+        "before": "e11"
+      },
+      {
+        "after": "e8",
+        "before": "e12"
+      },
+      {
+        "parallel": [
+          "e9",
+          "e10",
+          "e11",
+          "e12"
+        ]
+      },
+      {
+        "after": "e9",
+        "before": "e13"
+      },
+      {
+        "after": "e10",
+        "before": "e14"
+      },
+      {
+        "after": "e11",
+        "before": "e15"
+      },
+      {
+        "after": "e12",
+        "before": "e16"
+      },
+      {
+        "parallel": [
+          "e13",
+          "e14",
+          "e15",
+          "e16"
+        ]
+      },
+      {
+        "after": "e13",
+        "before": "e17"
+      },
+      {
+        "after": "e14",
+        "before": "e18"
+      },
+      {
+        "after": "e15",
+        "before": "e19"
+      },
+      {
+        "after": "e16",
+        "before": "e20"
+      },
+      {
+        "parallel": [
+          "e17",
+          "e18",
+          "e19",
+          "e20"
+        ]
+      },
+      {
+        "after": "e17",
+        "before": "e21"
+      },
+      {
+        "after": "e18",
+        "before": "e22"
+      },
+      {
+        "after": "e19",
+        "before": "e23"
+      },
+      {
+        "after": "e20",
+        "before": "e24"
+      },
+      {
+        "parallel": [
+          "e21",
+          "e22",
+          "e23",
+          "e24"
+        ]
+      }
+    ]
+  }
+}

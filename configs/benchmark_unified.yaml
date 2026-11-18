@@ -1,0 +1,104 @@
+# Unified reference configuration - Used for fair comparison between Grid and Area methods
+device: "cuda"
+logging_level: "INFO"
+
+# Unified evaluation configuration
+evaluation:
+  experiment_name: "unified_benchmark"
+  provider: "openai"
+  model: "gpt-4o-mini-2024-07-18"  # Use a model with lower cost
+  temperature: 0.1
+  repeat_count: 3
+  distraction_levels: [0, 1]
+  test_cases: [0, 1, 2, 10, 11, 20, 21]
+
+# Unified scene description configuration
+scene_describer:
+  model: "gpt-4o-2024-08-06"
+  provider: "openai"
+  temperature: 0.1
+  description_type: "narrative"
+  use_pregenerated_description: true
+  use_examples: true
+  use_clustering: true
+  eps: 1.0
+  min_samples: 2
+
+# Unified narrator configuration
+narrator:
+  model: "gpt-4o-mini-2024-07-18"
+  provider: "openai"
+  temperature: 0.1
+  use_JSON_mode: true
+  use_examples: true
+  use_self_feedback: false  # Turn off self-feedback to reduce variables
+  max_self_feedback_count: 3
+  additional_guidelines: ""
+  disable_event_based_planning: false
+  type: "default"  # Use the default type uniformly
+  enable_cache: true
+  cache_dir: "cache/narrator"
+  max_retries: 3
+  retry_delay: 2.0
+
+# Unified event parser configuration
+event_parser:
+  model: "gpt-4o-mini-2024-07-18"
+  provider: "openai"
+  temperature: 0.1
+  use_JSON_mode: true
+  use_examples: true
+  use_self_feedback: false  # Turn off self-feedback to reduce variables
+  max_self_feedback_count: 3
+  additional_guidelines: ""
+  disable_lcps: false
+  use_vision: false  # Unified visual disabling to avoid cross-modal differences
+  enable_cache: true
+  cache_dir: "cache/event_parser_benchmark"  # Unified cache directory
+  max_retries: 3
+  retry_delay: 2.0
+
+# Unified scene graph configuration
+scene_graph:
+  boundary_offset: 0.10
+  adjacent_threshold: 0.3
+  close_threshold: 1.0
+  relationship_xy_threshold: 2.0
+  relationship_z_threshold: 0.2
+  use_obj_positions: true
+  use_affordances: false
+
+# Unified position sampler configuration
+position_sampler:
+  init_temperature: 1.0
+  final_temperature: 0.0001
+  cooling_rate: 0.9
+  cooling_interval: 1
+  move_std: 0.5
+  k: 1.0
+  r: 5.0
+  max_iter: 5000
+  convergence_threshold: 0.05
+  convergence_iteration: 20
+  avoidance_coefficient: 5.0
+  avoidance_threshold: 0.5
+  nearby_threshold: 1.5
+  multi_object_thresholds:
+    between:
+      aligned: 1.0
+      orthogonal: 0.5
+    aligned with:
+      aligned: 1.0
+      orthogonal: 0.3
+  distance_threshold:
+    on the side of: 0.5
+    adjacent to: 0.5
+    close to: 1.0
+  cost_weights:
+    directional: 1.0
+    distance: 1.0
+    multi_object: 1.0
+    interaction: 100.0
+    avoidance: 10.0
+    nearby: 1.0
+  collision_check_type: "cylinder"

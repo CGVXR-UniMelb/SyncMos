@@ -1,0 +1,216 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "pick up",
+    "hand over",
+    "drink",
+    "eat",
+    "read",
+    "put down",
+    "wave",
+    "turn on",
+    "turn off",
+    "receive"
+  ],
+  "user_instruction": "Two parallel dependency chains that converge: Chain 1 - Amir picks up a bottle and hands it to Benjamin, Benjamin drinks and hands it to Charles. Chain 2 - At the same time, David picks up food and hands it to Evan, Evan eats and hands it to Charles. After Charles receives both items, Charles drinks from the bottle, eats the food, then waves. After Charles waves, everyone puts down items or stops their activities, and Amir turns off the lights.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "David"
+      ],
+      "activity": "pick up",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "hand over",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "receive",
+      "details": []
+    },
+    {
+      "idx": 4,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "David"
+      ],
+      "activity": "hand over",
+      "details": []
+    },
+    {
+      "idx": 5,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Evan"
+      ],
+      "activity": "receive",
+      "details": []
+    },
+    {
+      "idx": 6,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "drink",
+      "details": []
+    },
+    {
+      "idx": 7,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Evan"
+      ],
+      "activity": "eat",
+      "details": []
+    },
+    {
+      "idx": 8,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "receive",
+      "details": []
+    },
+    {
+      "idx": 9,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "hand over",
+      "details": []
+    },
+    {
+      "idx": 10,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Evan"
+      ],
+      "activity": "hand over",
+      "details": []
+    },
+    {
+      "idx": 11,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "receive",
+      "details": []
+    },
+    {
+      "idx": 12,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "drink",
+      "details": []
+    },
+    {
+      "idx": 13,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "eat",
+      "details": []
+    },
+    {
+      "idx": 14,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "wave",
+      "details": []
+    },
+    {
+      "idx": 15,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "put down",
+      "details": []
+    },
+    {
+      "idx": 16,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "put down",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin",
+    "Charles",
+    "David",
+    "Evan"
+  ],
+  "expected_next_event": {
+    "character": "Amir",
+    "activity": "turn off"
+  }
+}

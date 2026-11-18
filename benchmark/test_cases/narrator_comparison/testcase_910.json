@@ -1,0 +1,64 @@
+{
+  "id": 910,
+  "tags": [
+    "dependency",
+    "office",
+    "join",
+    "meeting"
+  ],
+  "scene_name": "Office",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "type on",
+    "start meeting"
+  ],
+  "user_instruction": "Amir sits on chair_4 and Benjamin sits on chair_5. After both are seated, they start a meeting. After the meeting, Amir stands up, then Benjamin stands up.",
+  "characters": [
+    "Amir",
+    "Benjamin"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "sit down on chair_4"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "sit down on chair_5"
+      },
+      {
+        "event_id": "e3",
+        "character": "Amir",
+        "activity": "start meeting on chair_4 (continuous)"
+      },
+      {
+        "event_id": "e4",
+        "character": "Benjamin",
+        "activity": "start meeting on chair_5 (continuous)"
+      },
+      {
+        "event_id": "e5",
+        "character": "Amir",
+        "activity": "stand up from chair_4"
+      },
+      {
+        "event_id": "e6",
+        "character": "Benjamin",
+        "activity": "stand up from chair_5"
+      }
+    ],
+    "dependencies": [
+      { "after": "e1", "before": "e3" },
+      { "after": "e2", "before": "e4" },
+      { "parallel": ["e3", "e4"] },
+      { "after": "e3", "before": "e5" },
+      { "after": "e4", "before": "e6" }
+    ]
+  }
+}

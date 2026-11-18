@@ -1,0 +1,70 @@
+{
+  "id": 2003,
+  "difficulty": "simple",
+  "tags": [
+    "dependency",
+    "sequential",
+    "simple",
+    "three_characters"
+  ],
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "sit down",
+    "stand up"
+  ],
+  "user_instruction": "Amir sits on a chair. After Amir stands up, Benjamin sits on the same chair. After Benjamin stands up, Charles sits on the same chair.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "sit down on chair"
+      },
+      {
+        "event_id": "e2",
+        "character": "Amir",
+        "activity": "stand up from chair"
+      },
+      {
+        "event_id": "e3",
+        "character": "Benjamin",
+        "activity": "sit down on same chair"
+      },
+      {
+        "event_id": "e4",
+        "character": "Benjamin",
+        "activity": "stand up from chair"
+      },
+      {
+        "event_id": "e5",
+        "character": "Charles",
+        "activity": "sit down on same chair"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e1",
+        "before": "e2"
+      },
+      {
+        "after": "e2",
+        "before": "e3"
+      },
+      {
+        "after": "e3",
+        "before": "e4"
+      },
+      {
+        "after": "e4",
+        "before": "e5"
+      }
+    ]
+  }
+}

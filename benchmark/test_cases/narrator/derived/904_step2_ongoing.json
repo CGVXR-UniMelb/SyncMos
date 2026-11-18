@@ -1,0 +1,39 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "drink",
+    "pick up",
+    "put down"
+  ],
+  "user_instruction": "Amir sits on chair_4 in the dining area, then stands up. After Amir stands up, Benjamin sits on the same chair_4.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down on chair_4",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "stand up from chair_4",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Benjamin"
+  ],
+  "expected_next_event": {}
+}

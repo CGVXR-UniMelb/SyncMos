@@ -1,0 +1,202 @@
+{
+  "id": 2012,
+  "difficulty": "complex",
+  "tags": [
+    "dependency",
+    "multi_dependency",
+    "complex",
+    "five_characters"
+  ],
+  "scene_name": "House",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "pick up",
+    "hand over",
+    "drink",
+    "eat",
+    "put down",
+    "wave"
+  ],
+  "user_instruction": "Complex coordination: Amir and Benjamin sit at a table. After both sit, Charles picks up a bottle and hands it to Amir. Amir drinks from it. Meanwhile, David picks up food and hands it to Benjamin. Benjamin eats it. After both Amir and Benjamin finish, Evan waves to everyone. Then Amir and Benjamin put down their items and stand up together.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles",
+    "David",
+    "Evan"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "sit down at table"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "sit down at table"
+      },
+      {
+        "event_id": "e3",
+        "character": "Charles",
+        "activity": "pick up bottle"
+      },
+      {
+        "event_id": "e4",
+        "character": "David",
+        "activity": "pick up food"
+      },
+      {
+        "event_id": "e5",
+        "character": "Charles",
+        "activity": "hand over bottle to Amir"
+      },
+      {
+        "event_id": "e6",
+        "character": "Amir",
+        "activity": "receive bottle from Charles"
+      },
+      {
+        "event_id": "e7",
+        "character": "David",
+        "activity": "hand over food to Benjamin"
+      },
+      {
+        "event_id": "e8",
+        "character": "Benjamin",
+        "activity": "receive food from David"
+      },
+      {
+        "event_id": "e9",
+        "character": "Amir",
+        "activity": "drink from bottle"
+      },
+      {
+        "event_id": "e10",
+        "character": "Benjamin",
+        "activity": "eat food"
+      },
+      {
+        "event_id": "e11",
+        "character": "Evan",
+        "activity": "wave to everyone"
+      },
+      {
+        "event_id": "e12",
+        "character": "Amir",
+        "activity": "put down bottle"
+      },
+      {
+        "event_id": "e13",
+        "character": "Benjamin",
+        "activity": "put down food"
+      },
+      {
+        "event_id": "e14",
+        "character": "Amir",
+        "activity": "stand up"
+      },
+      {
+        "event_id": "e15",
+        "character": "Benjamin",
+        "activity": "stand up"
+      }
+    ],
+    "dependencies": [
+      {
+        "parallel": [
+          "e1",
+          "e2"
+        ]
+      },
+      {
+        "after": "e1",
+        "before": "e3"
+      },
+      {
+        "after": "e2",
+        "before": "e4"
+      },
+      {
+        "parallel": [
+          "e3",
+          "e4"
+        ]
+      },
+      {
+        "after": "e3",
+        "before": "e5"
+      },
+      {
+        "after": "e4",
+        "before": "e7"
+      },
+      {
+        "parallel": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "parallel": [
+          "e7",
+          "e8"
+        ]
+      },
+      {
+        "after": "e6",
+        "before": "e9"
+      },
+      {
+        "after": "e8",
+        "before": "e10"
+      },
+      {
+        "parallel": [
+          "e9",
+          "e10"
+        ]
+      },
+      {
+        "after": "e9",
+        "before": "e11"
+      },
+      {
+        "after": "e10",
+        "before": "e11"
+      },
+      {
+        "after": "e11",
+        "before": "e12"
+      },
+      {
+        "after": "e11",
+        "before": "e13"
+      },
+      {
+        "parallel": [
+          "e12",
+          "e13"
+        ]
+      },
+      {
+        "after": "e12",
+        "before": "e14"
+      },
+      {
+        "after": "e13",
+        "before": "e15"
+      },
+      {
+        "parallel": [
+          "e14",
+          "e15"
+        ]
+      }
+    ]
+  }
+}

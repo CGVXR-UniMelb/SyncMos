@@ -1,0 +1,51 @@
+{
+  "id": 904,
+  "tags": [
+    "dependency",
+    "sequential_object_use"
+  ],
+  "scene_name": "House",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "drink",
+    "pick up",
+    "put down"
+  ],
+  "user_instruction": "Amir sits on chair_4 in the dining area, then stands up. After Amir stands up, Benjamin sits on the same chair_4.",
+  "characters": [
+    "Amir",
+    "Benjamin"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "sit down on chair_4"
+      },
+      {
+        "event_id": "e2",
+        "character": "Amir",
+        "activity": "stand up from chair_4"
+      },
+      {
+        "event_id": "e3",
+        "character": "Benjamin",
+        "activity": "sit down on chair_4"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e1",
+        "before": "e2"
+      },
+      {
+        "after": "e2",
+        "before": "e3"
+      }
+    ]
+  }
+}

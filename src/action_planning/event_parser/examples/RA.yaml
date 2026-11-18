@@ -1,0 +1,55 @@
+scene_name: 4138585b-a238-2435-810b-9728fc989b2f # kitchen
+action_labels:
+  - idle
+  - walk
+  - pick up
+  - put down
+  - raise
+  - show
+
+event:
+  characters: [Carol]
+  activity: raise the cup to show it in the air using right hand
+
+characters:
+  - name: Carol
+    state: interacting
+    current_action: pick up
+    position:
+      - adjacent to counter_1
+    orientation:
+      - look at cup_1
+
+previous_events:
+  - characters: [Carol]
+    activity: pick up the cup from the counter
+    state: done
+    parsed:
+      - character: Carol
+        target_action: pick up
+        position:
+          - adjacent to counter_1
+        orientation:
+          - look at cup_1
+
+response: |
+  ```python
+  def parse_event():
+    # Carol needs to raise the cup to show it in the air
+    carol = get_character("Carol")
+    
+    # Carol should remain in her current position to raise the cup
+    # She's already adjacent to the counter where she picked up the cup
+    carol_position = get_area_adjacent_to("counter_1")
+    
+    # The target action is 'raise' from the available actions
+    # If 'raise' is not available, use 'show' or the closest semantic action
+    carol_action = "raise"
+    
+    # Carol doesn't need a specific orientation when raising the cup
+    # She might look at the cup or forward
+    carol.set_position(carol_position)
+    carol.set_target_action(carol_action)
+    
+    return [carol]
+  ```

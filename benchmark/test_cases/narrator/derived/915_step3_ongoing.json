@@ -1,0 +1,85 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "pick up",
+    "play guitar",
+    "play piano",
+    "play drums",
+    "listen to music"
+  ],
+  "user_instruction": "Amir sits on chair_4 and picks up guitar_1. Benjamin sits on chair_6 and picks up drum_1. After both pick up their instruments, Amir plays guitar_1 and Benjamin plays drums at the same time. Charles sits on chair_8 and listens to music.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down on chair_4",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down on chair_6",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up guitar_1",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "pick up drum_1",
+      "details": []
+    },
+    {
+      "idx": 4,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "play guitar_1",
+      "details": []
+    },
+    {
+      "idx": 5,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "play drums",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Charles"
+  ],
+  "expected_next_event": {}
+}

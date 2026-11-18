@@ -1,0 +1,15 @@
+{
+  "position": [
+    6.92,
+    5.23,
+    2.99
+  ],
+  "target": [
+    2.29,
+    5.23,
+    0.25
+  ],
+  "projection": "perspective",
+  "preset": "Default",
+  "custom_presets": {}
+}

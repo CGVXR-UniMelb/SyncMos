@@ -1,0 +1,45 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "pick up",
+    "put down"
+  ],
+  "user_instruction": "Amir sits on chair_4, then picks up bottle_1 from table_4, then stands up from chair_4. Benjamin sits on chair_6, then stands up. After both Amir and Benjamin stand up, Charles sits on chair_4.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down on chair_4",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down on chair_6",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_next_event": {
+    "characters": [
+      "Amir",
+      "Benjamin"
+    ]
+  }
+}

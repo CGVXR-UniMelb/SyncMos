@@ -1,0 +1,74 @@
+{
+  "scene_name": "Office",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "type on",
+    "talk on",
+    "read",
+    "wave",
+    "drink",
+    "turn on",
+    "turn off"
+  ],
+  "user_instruction": "Five office workers coordinate a synchronized workflow. Each person sits down, performs their primary task (Amir types, Benjamin talks on phone, Charles reads, David drinks coffee, Evan waves), takes a break to wave to others, resumes their task, then all turn off their devices/put down items and stand up simultaneously.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "David"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 4,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Evan"
+      ],
+      "activity": "sit down",
+      "details": []
+    }
+  ],
+  "available_characters": [],
+  "expected_next_event": {}
+}

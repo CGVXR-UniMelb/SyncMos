@@ -1,0 +1,42 @@
+scene_name: 4138585b-a238-2435-810b-9728fc989b2f # kitchen
+action_labels:
+  - idle
+  - walk
+  - pick up
+  - put down
+  - sit down
+  - stand up
+
+event:
+  characters: [Alice]
+  activity: pick up the bottle from the table
+
+characters:
+  - name: Alice
+    state: idle
+    current_action: idle
+    position: []
+    orientation: []
+
+previous_events: []
+
+response: |
+  ```python
+  def parse_event():
+    # Alice needs to pick up the bottle from the table
+    alice = get_character("Alice")
+    
+    # Alice should stand adjacent to the table to pick up the bottle
+    # Using adjacent relationship allows her to reach the bottle on the table
+    alice_position = get_area_adjacent_to("table_1")
+    
+    # The target action is 'pick up' from the available actions
+    alice_action = "pick up"
+    
+    # Alice should look at the bottle she's picking up
+    alice.set_position(alice_position)
+    alice.set_orientation("bottle_1")
+    alice.set_target_action(alice_action)
+    
+    return [alice]
+  ```

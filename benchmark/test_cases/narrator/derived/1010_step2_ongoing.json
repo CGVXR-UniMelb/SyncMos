@@ -1,0 +1,104 @@
+{
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "sit down",
+    "eat",
+    "drink",
+    "talk on",
+    "wave",
+    "stand up"
+  ],
+  "user_instruction": "In the restaurant, Amir and Benjamin sit at one table while Charles and David sit at another table. All four sit down simultaneously. Amir eats, Benjamin drinks, Charles talks on phone, David waves. Then all stand up together.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "David"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 4,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "eat",
+      "details": []
+    },
+    {
+      "idx": 5,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "drink",
+      "details": []
+    },
+    {
+      "idx": 6,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "talk on",
+      "details": []
+    },
+    {
+      "idx": 7,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "David"
+      ],
+      "activity": "wave",
+      "details": []
+    }
+  ],
+  "available_characters": [],
+  "expected_next_event": {}
+}

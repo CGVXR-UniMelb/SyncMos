@@ -1,0 +1,100 @@
+device: cuda
+evaluation:
+  distraction_levels:
+  - 0
+  - 1
+  experiment_name: area_baseline
+  model: gpt-4o-mini-2024-07-18
+  provider: openai
+  repeat_count: 3
+  temperature: 0.1
+  test_cases:
+  - 0
+  - 1
+  - 2
+  - 10
+  - 11
+  - 20
+  - 21
+event_parser:
+  additional_guidelines: ''
+  disable_lcps: false
+  enable_cache: true
+  cache_dir: cache/event_parser
+  max_self_feedback_count: 3
+  model: gpt-4o-mini-2024-07-18
+  parser_mode: single
+  provider: openai
+  temperature: 0.1
+  use_JSON_mode: true
+  use_examples: true
+  use_self_feedback: false
+  max_retries: 3
+  retry_delay: 2.0
+logging_level: INFO
+narrator:
+  additional_guidelines: ''
+  disable_event_based_planning: false
+  enable_cache: true
+  cache_dir: cache/narrator
+  max_self_feedback_count: 3
+  model: gpt-4o-mini-2024-07-18
+  provider: openai
+  temperature: 0.1
+  type: default
+  use_JSON_mode: true
+  use_examples: true
+  use_self_feedback: false
+  max_retries: 3
+  retry_delay: 2.0
+position_sampler:
+  avoidance_coefficient: 5.0
+  avoidance_threshold: 0.5
+  collision_check_type: cylinder
+  convergence_iteration: 20
+  convergence_threshold: 0.05
+  cooling_interval: 1
+  cooling_rate: 0.9
+  cost_weights:
+    avoidance: 10.0
+    directional: 1.0
+    distance: 1.0
+    interaction: 100.0
+    multi_object: 1.0
+    nearby: 1.0
+  distance_threshold:
+    adjacent to: 0.5
+    close to: 1.0
+    on the side of: 0.5
+  final_temperature: 0.0001
+  init_temperature: 1.0
+  k: 1.0
+  max_iter: 5000
+  move_std: 0.5
+  multi_object_thresholds:
+    aligned with:
+      aligned: 1.0
+      orthogonal: 0.3
+    between:
+      aligned: 1.0
+      orthogonal: 0.5
+  nearby_threshold: 1.5
+  r: 5.0
+scene_describer:
+  description_type: narrative
+  eps: 1.0
+  min_samples: 2
+  model: gpt-4o-2024-08-06
+  provider: openai
+  temperature: 0.1
+  use_clustering: true
+  use_examples: true
+  use_pregenerated_description: true
+scene_graph:
+  adjacent_threshold: 0.3
+  boundary_offset: 0.1
+  close_threshold: 1.0
+  relationship_xy_threshold: 2.0
+  relationship_z_threshold: 0.2
+  use_affordances: false
+  use_obj_positions: true

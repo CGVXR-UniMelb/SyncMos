@@ -1,0 +1,78 @@
+{
+  "id": 906,
+  "tags": [
+    "dependency",
+    "multi_character_sequence"
+  ],
+  "scene_name": "House",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "pick up",
+    "put down"
+  ],
+  "user_instruction": "Amir sits on chair_4, then picks up bottle_1 from table_4, then stands up from chair_4. Benjamin sits on chair_6, then stands up. After both Amir and Benjamin stand up, Charles sits on chair_4.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "sit down on chair_4"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "sit down on chair_6"
+      },
+      {
+        "event_id": "e3",
+        "character": "Amir",
+        "activity": "pick up bottle_1 from table_4"
+      },
+      {
+        "event_id": "e4",
+        "character": "Amir",
+        "activity": "stand up from chair_4"
+      },
+      {
+        "event_id": "e5",
+        "character": "Benjamin",
+        "activity": "stand up from chair_6"
+      },
+      {
+        "event_id": "e6",
+        "character": "Charles",
+        "activity": "sit down on chair_4"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e1",
+        "before": "e3"
+      },
+      {
+        "after": "e3",
+        "before": "e4"
+      },
+      {
+        "after": "e2",
+        "before": "e5"
+      },
+      {
+        "after": "e4",
+        "before": "e6"
+      },
+      {
+        "after": "e5",
+        "before": "e6"
+      }
+    ]
+  }
+}

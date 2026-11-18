@@ -1,0 +1,70 @@
+{
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "pick up",
+    "put down",
+    "walk back",
+    "hand over",
+    "receive",
+    "turn on",
+    "turn off"
+  ],
+  "user_instruction": "Amir picks up plate_1 from kitchen_counter_1 and walks forward to table_1. Benjamin picks up plate_2 from kitchen_counter_1 and walks forward to table_4. After both arrive, Amir puts down plate_1 on table_1 and Benjamin puts down plate_2 on table_4. Then both Amir and Benjamin walk back to kitchen_counter_1. After both return, Charles picks up bottle_1 from kitchen_counter_1.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up plate_1 from kitchen_counter_1",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "pick up plate_2 from kitchen_counter_1",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "put down plate_1 on table_1",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "put down plate_2 on table_4",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_next_event": {
+    "characters": [
+      "Amir",
+      "Benjamin"
+    ]
+  }
+}

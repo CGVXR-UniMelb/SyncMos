@@ -1,0 +1,52 @@
+{
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "sit down",
+    "stand up"
+  ],
+  "user_instruction": "Amir sits on a chair. After Amir stands up, Benjamin sits on the same chair. After Benjamin stands up, Charles sits on the same chair.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "stand up",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_next_event": {
+    "character": "Benjamin",
+    "activity": "stand up"
+  }
+}

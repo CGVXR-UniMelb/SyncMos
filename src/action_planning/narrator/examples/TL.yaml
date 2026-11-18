@@ -1,0 +1,73 @@
+scene_name: 0cac755a-8d6f-2d13-8fed-b1be02f4ef77 # lounge
+action_labels:
+  - idle
+  - bend forward
+  - brush teeth
+  - crawl
+  - drink
+  - eat
+  - get up
+  - kick
+  - kneel down
+  - lie down
+  - listen to music
+  - maintain bend
+  - maintain kneel
+  - maintain lie
+  - maintain sit
+  - maintain squat
+  - pick up
+  - play drums
+  - play game
+  - play guitar
+  - play piano
+  - punch
+  - put down
+  - read
+  - rotate
+  - sit down
+  - squat down
+  - stand still
+  - stand up
+  - straighten up
+  - swing
+  - take photo
+  - take shower
+  - talk on
+  - toss
+  - turn left
+  - turn on
+  - turn right
+  - type on
+  - walk
+  - walk back
+  - walk forward
+  - walk front left
+  - walk front right
+  - wash
+  - wave
+  - write
+
+user_instruction: |
+  James hands over the bottle to Sara between two tables.
+
+characters:
+  - name: James
+    state: idle
+    current_action: idle
+    position: []
+    orientation: []
+  - name: Sara
+    state: idle
+    current_action: idle
+    position: []
+    orientation: []
+
+previous_events: []
+
+response:
+  reasoning: |
+    The handover requires James to hand it over to Sara between the two tables.
+
+  characters: [James, Sara]
+  activity: James hand over the bottle to Sara between table_3 and table_4 and Sara receive the bottle from James between table_3 and table_4

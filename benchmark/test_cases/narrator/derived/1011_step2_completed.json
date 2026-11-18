@@ -1,0 +1,141 @@
+{
+  "scene_name": "Office",
+  "action_labels": [
+    "sit down",
+    "type on",
+    "talk on",
+    "read",
+    "wave",
+    "stand up",
+    "drink"
+  ],
+  "user_instruction": "Five colleagues work simultaneously in the office. Amir sits and types, Benjamin sits and talks on phone, Charles sits and reads, David sits and waves, Evan sits and drinks coffee. After their activities, they all wave to each other simultaneously and then stand up together.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "David"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 4,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Evan"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 5,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Evan"
+      ],
+      "activity": "drink",
+      "details": []
+    },
+    {
+      "idx": 6,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "type on",
+      "details": []
+    },
+    {
+      "idx": 7,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "talk on",
+      "details": []
+    },
+    {
+      "idx": 8,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "read",
+      "details": []
+    },
+    {
+      "idx": 9,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "David"
+      ],
+      "activity": "wave",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin",
+    "Charles",
+    "David",
+    "Evan"
+  ],
+  "expected_next_event": {
+    "characters": [
+      "Evan",
+      "Benjamin",
+      "David",
+      "Charles",
+      "Amir"
+    ]
+  }
+}

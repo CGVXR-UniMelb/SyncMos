@@ -1,0 +1,29 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "pick up",
+    "turn on",
+    "read",
+    "put down",
+    "turn off"
+  ],
+  "user_instruction": "Amir picks up a book. Benjamin turns on the light after seeing Amir pick up the book. After the light is on, Amir reads the book. Charles waits while Amir is reading, then Amir puts down the book and Benjamin turns off the light.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_next_event": {}
+}

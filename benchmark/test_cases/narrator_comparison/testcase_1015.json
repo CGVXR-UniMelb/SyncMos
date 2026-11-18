@@ -1,0 +1,342 @@
+{
+  "id": 1015,
+  "difficulty": "complex",
+  "tags": [
+    "synchronization",
+    "parallel",
+    "complex",
+    "five_characters"
+  ],
+  "scene_name": "Office",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "type on",
+    "talk on",
+    "read",
+    "wave",
+    "drink",
+    "turn on",
+    "turn off"
+  ],
+  "user_instruction": "Five office workers coordinate a synchronized workflow. Each person sits down, performs their primary task (Amir types, Benjamin talks on phone, Charles reads, David drinks coffee, Evan waves), takes a break to wave to others, resumes their task, then all turn off their devices/put down items and stand up simultaneously.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles",
+    "David",
+    "Evan"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "sit down at desk"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "sit down at desk"
+      },
+      {
+        "event_id": "e3",
+        "character": "Charles",
+        "activity": "sit down at desk"
+      },
+      {
+        "event_id": "e4",
+        "character": "David",
+        "activity": "sit down at desk"
+      },
+      {
+        "event_id": "e5",
+        "character": "Evan",
+        "activity": "sit down at desk"
+      },
+      {
+        "event_id": "e6",
+        "character": "Amir",
+        "activity": "start typing on laptop"
+      },
+      {
+        "event_id": "e7",
+        "character": "Benjamin",
+        "activity": "start talking on phone"
+      },
+      {
+        "event_id": "e8",
+        "character": "Charles",
+        "activity": "start reading documents"
+      },
+      {
+        "event_id": "e9",
+        "character": "David",
+        "activity": "start drinking coffee"
+      },
+      {
+        "event_id": "e10",
+        "character": "Evan",
+        "activity": "wave to colleagues"
+      },
+      {
+        "event_id": "e11",
+        "character": "Amir",
+        "activity": "wave to colleagues"
+      },
+      {
+        "event_id": "e12",
+        "character": "Benjamin",
+        "activity": "wave to colleagues"
+      },
+      {
+        "event_id": "e13",
+        "character": "Charles",
+        "activity": "wave to colleagues"
+      },
+      {
+        "event_id": "e14",
+        "character": "David",
+        "activity": "wave to colleagues"
+      },
+      {
+        "event_id": "e15",
+        "character": "Evan",
+        "activity": "resume waving"
+      },
+      {
+        "event_id": "e16",
+        "character": "Amir",
+        "activity": "resume typing"
+      },
+      {
+        "event_id": "e17",
+        "character": "Benjamin",
+        "activity": "resume phone call"
+      },
+      {
+        "event_id": "e18",
+        "character": "Charles",
+        "activity": "resume reading"
+      },
+      {
+        "event_id": "e19",
+        "character": "David",
+        "activity": "resume drinking"
+      },
+      {
+        "event_id": "e20",
+        "character": "Evan",
+        "activity": "stop waving"
+      },
+      {
+        "event_id": "e21",
+        "character": "Amir",
+        "activity": "stop typing"
+      },
+      {
+        "event_id": "e22",
+        "character": "Benjamin",
+        "activity": "end phone call"
+      },
+      {
+        "event_id": "e23",
+        "character": "Charles",
+        "activity": "put down documents"
+      },
+      {
+        "event_id": "e24",
+        "character": "David",
+        "activity": "put down coffee"
+      },
+      {
+        "event_id": "e25",
+        "character": "Evan",
+        "activity": "stand still"
+      },
+      {
+        "event_id": "e26",
+        "character": "Amir",
+        "activity": "stand up"
+      },
+      {
+        "event_id": "e27",
+        "character": "Benjamin",
+        "activity": "stand up"
+      },
+      {
+        "event_id": "e28",
+        "character": "Charles",
+        "activity": "stand up"
+      },
+      {
+        "event_id": "e29",
+        "character": "David",
+        "activity": "stand up"
+      },
+      {
+        "event_id": "e30",
+        "character": "Evan",
+        "activity": "stand up"
+      }
+    ],
+    "dependencies": [
+      {
+        "parallel": [
+          "e1",
+          "e2",
+          "e3",
+          "e4",
+          "e5"
+        ]
+      },
+      {
+        "after": "e1",
+        "before": "e6"
+      },
+      {
+        "after": "e2",
+        "before": "e7"
+      },
+      {
+        "after": "e3",
+        "before": "e8"
+      },
+      {
+        "after": "e4",
+        "before": "e9"
+      },
+      {
+        "after": "e5",
+        "before": "e10"
+      },
+      {
+        "parallel": [
+          "e6",
+          "e7",
+          "e8",
+          "e9",
+          "e10"
+        ]
+      },
+      {
+        "after": "e6",
+        "before": "e11"
+      },
+      {
+        "after": "e7",
+        "before": "e12"
+      },
+      {
+        "after": "e8",
+        "before": "e13"
+      },
+      {
+        "after": "e9",
+        "before": "e14"
+      },
+      {
+        "after": "e10",
+        "before": "e15"
+      },
+      {
+        "parallel": [
+          "e11",
+          "e12",
+          "e13",
+          "e14",
+          "e15"
+        ]
+      },
+      {
+        "after": "e11",
+        "before": "e16"
+      },
+      {
+        "after": "e12",
+        "before": "e17"
+      },
+      {
+        "after": "e13",
+        "before": "e18"
+      },
+      {
+        "after": "e14",
+        "before": "e19"
+      },
+      {
+        "after": "e15",
+        "before": "e20"
+      },
+      {
+        "parallel": [
+          "e16",
+          "e17",
+          "e18",
+          "e19",
+          "e20"
+        ]
+      },
+      {
+        "after": "e16",
+        "before": "e21"
+      },
+      {
+        "after": "e17",
+        "before": "e22"
+      },
+      {
+        "after": "e18",
+        "before": "e23"
+      },
+      {
+        "after": "e19",
+        "before": "e24"
+      },
+      {
+        "after": "e20",
+        "before": "e25"
+      },
+      {
+        "parallel": [
+          "e21",
+          "e22",
+          "e23",
+          "e24",
+          "e25"
+        ]
+      },
+      {
+        "after": "e21",
+        "before": "e26"
+      },
+      {
+        "after": "e22",
+        "before": "e27"
+      },
+      {
+        "after": "e23",
+        "before": "e28"
+      },
+      {
+        "after": "e24",
+        "before": "e29"
+      },
+      {
+        "after": "e25",
+        "before": "e30"
+      },
+      {
+        "parallel": [
+          "e26",
+          "e27",
+          "e28",
+          "e29",
+          "e30"
+        ]
+      }
+    ]
+  }
+}

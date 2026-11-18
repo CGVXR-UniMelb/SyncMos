@@ -1,0 +1,36 @@
+{
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "pick up",
+    "put down",
+    "hand over",
+    "receive"
+  ],
+  "user_instruction": "Amir picks up bottle_1 from bar_counter_1 and Benjamin picks up bottle_2 from bar_counter_1 at the same time. Then Amir puts bottle_1 on table_1 and Benjamin puts bottle_2 on table_4.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up bottle_1 from bar_counter_1",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "pick up bottle_2 from bar_counter_1",
+      "details": []
+    }
+  ],
+  "available_characters": [],
+  "expected_next_event": {}
+}

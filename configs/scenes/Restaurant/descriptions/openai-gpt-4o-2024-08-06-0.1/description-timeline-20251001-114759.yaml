@@ -1,0 +1,10 @@
+completion_tokens: 0
+description_file: description-timeline-20251001-114759.txt
+description_type: narrative_timeline
+generated_at: '2025-10-01T11:47:59.267692'
+model: gpt-4o-2024-08-06
+prompt_tokens: 0
+provider: openai
+temperature: 0.1
+total_tokens: 0
+use_timeline_examples: true

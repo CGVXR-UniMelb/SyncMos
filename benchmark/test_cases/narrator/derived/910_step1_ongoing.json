@@ -1,0 +1,36 @@
+{
+  "scene_name": "Office",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "type on",
+    "start meeting"
+  ],
+  "user_instruction": "Amir sits on chair_4 and Benjamin sits on chair_5. After both are seated, they start a meeting. After the meeting, Amir stands up, then Benjamin stands up.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down on chair_4",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down on chair_5",
+      "details": []
+    }
+  ],
+  "available_characters": [],
+  "expected_next_event": {}
+}

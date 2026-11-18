@@ -1,0 +1,52 @@
+{
+  "id": 1005,
+  "difficulty": "simple",
+  "tags": [
+    "synchronization",
+    "parallel",
+    "simple",
+    "three_characters"
+  ],
+  "scene_name": "Office",
+  "action_labels": [
+    "type on",
+    "talk on",
+    "read"
+  ],
+  "user_instruction": "Amir types on his laptop, Benjamin talks on the phone, and Charles reads a document. All three work simultaneously.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "type on laptop"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "talk on phone"
+      },
+      {
+        "event_id": "e3",
+        "character": "Charles",
+        "activity": "read document"
+      }
+    ],
+    "dependencies": [
+      {
+        "parallel": [
+          "e1",
+          "e2",
+          "e3"
+        ]
+      }
+    ]
+  }
+}

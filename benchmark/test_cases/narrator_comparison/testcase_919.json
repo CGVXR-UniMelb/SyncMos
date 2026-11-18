@@ -1,0 +1,122 @@
+{
+  "id": 919,
+  "tags": [
+    "dependency",
+    "office",
+    "work",
+    "parallel",
+    "collaboration"
+  ],
+  "scene_name": "Office",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "pick up",
+    "put down",
+    "write",
+    "read",
+    "type on",
+    "take photo"
+  ],
+  "user_instruction": "Amir sits on chair_1 and picks up document_1 from desk_1. Benjamin sits on chair_2 and picks up document_2 from desk_2. After both pick up documents, Amir reads document_1 while Benjamin writes on document_2. After both finish, Amir takes photo of document_1 and Benjamin types on laptop_1.",
+  "characters": [
+    "Amir",
+    "Benjamin"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "sit down on chair_1"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "sit down on chair_2"
+      },
+      {
+        "event_id": "e3",
+        "character": "Amir",
+        "activity": "pick up document_1 from desk_1"
+      },
+      {
+        "event_id": "e4",
+        "character": "Benjamin",
+        "activity": "pick up document_2 from desk_2"
+      },
+      {
+        "event_id": "e5",
+        "character": "Amir",
+        "activity": "read"
+      },
+      {
+        "event_id": "e6",
+        "character": "Benjamin",
+        "activity": "write"
+      },
+      {
+        "event_id": "e7",
+        "character": "Amir",
+        "activity": "take photo"
+      },
+      {
+        "event_id": "e8",
+        "character": "Benjamin",
+        "activity": "type on laptop_1"
+      }
+    ],
+    "dependencies": [
+      {
+        "parallel": [
+          "e1",
+          "e2"
+        ]
+      },
+      {
+        "after": "e1",
+        "before": "e3"
+      },
+      {
+        "after": "e2",
+        "before": "e4"
+      },
+      {
+        "parallel": [
+          "e3",
+          "e4"
+        ]
+      },
+      {
+        "after": "e3",
+        "before": "e5"
+      },
+      {
+        "after": "e4",
+        "before": "e6"
+      },
+      {
+        "parallel": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "after": "e5",
+        "before": "e7"
+      },
+      {
+        "after": "e6",
+        "before": "e8"
+      },
+      {
+        "parallel": [
+          "e7",
+          "e8"
+        ]
+      }
+    ]
+  }
+}

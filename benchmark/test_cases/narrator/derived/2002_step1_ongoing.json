@@ -1,0 +1,26 @@
+{
+  "scene_name": "Office",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "wave"
+  ],
+  "user_instruction": "Amir sits on a chair. After Amir sits down, Benjamin waves to Amir. Then Amir stands up.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Benjamin"
+  ],
+  "expected_next_event": {}
+}

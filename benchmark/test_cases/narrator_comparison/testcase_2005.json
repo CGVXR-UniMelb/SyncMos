@@ -1,0 +1,74 @@
+{
+  "id": 2005,
+  "difficulty": "simple",
+  "tags": [
+    "dependency",
+    "sequential",
+    "simple",
+    "three_characters"
+  ],
+  "scene_name": "Office",
+  "action_labels": [
+    "pick up",
+    "hand over"
+  ],
+  "user_instruction": "Amir picks up a document and hands it to Benjamin. Benjamin hands it to Charles.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "pick up document"
+      },
+      {
+        "event_id": "e2",
+        "character": "Amir",
+        "activity": "hand over document to Benjamin"
+      },
+      {
+        "event_id": "e3",
+        "character": "Benjamin",
+        "activity": "receive document from Amir"
+      },
+      {
+        "event_id": "e4",
+        "character": "Benjamin",
+        "activity": "hand over document to Charles"
+      },
+      {
+        "event_id": "e5",
+        "character": "Charles",
+        "activity": "receive document from Benjamin"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e1",
+        "before": "e2"
+      },
+      {
+        "parallel": [
+          "e2",
+          "e3"
+        ]
+      },
+      {
+        "after": "e3",
+        "before": "e4"
+      },
+      {
+        "parallel": [
+          "e4",
+          "e5"
+        ]
+      }
+    ]
+  }
+}

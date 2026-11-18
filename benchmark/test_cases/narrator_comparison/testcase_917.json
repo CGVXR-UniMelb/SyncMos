@@ -1,0 +1,109 @@
+{
+  "id": 917,
+  "tags": [
+    "dependency",
+    "house",
+    "daily_life",
+    "sequential",
+    "meal"
+  ],
+  "scene_name": "House",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "pick up",
+    "put down",
+    "eat",
+    "drink",
+    "read"
+  ],
+  "user_instruction": "Amir sits on chair_4, picks up book_1 from table_4, and reads it. After reading, Amir puts down book_1, picks up plate_1 from table_4, and eats. After eating, Amir picks up cup_1 from table_4 and drinks. Finally, Amir stands up.",
+  "characters": [
+    "Amir"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "sit down on chair_4"
+      },
+      {
+        "event_id": "e2",
+        "character": "Amir",
+        "activity": "pick up book_1 from table_4"
+      },
+      {
+        "event_id": "e3",
+        "character": "Amir",
+        "activity": "read"
+      },
+      {
+        "event_id": "e4",
+        "character": "Amir",
+        "activity": "put down book_1"
+      },
+      {
+        "event_id": "e5",
+        "character": "Amir",
+        "activity": "pick up plate_1 from table_4"
+      },
+      {
+        "event_id": "e6",
+        "character": "Amir",
+        "activity": "eat"
+      },
+      {
+        "event_id": "e7",
+        "character": "Amir",
+        "activity": "pick up cup_1 from table_4"
+      },
+      {
+        "event_id": "e8",
+        "character": "Amir",
+        "activity": "drink"
+      },
+      {
+        "event_id": "e9",
+        "character": "Amir",
+        "activity": "stand up from chair_4"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e1",
+        "before": "e2"
+      },
+      {
+        "after": "e2",
+        "before": "e3"
+      },
+      {
+        "after": "e3",
+        "before": "e4"
+      },
+      {
+        "after": "e4",
+        "before": "e5"
+      },
+      {
+        "after": "e5",
+        "before": "e6"
+      },
+      {
+        "after": "e6",
+        "before": "e7"
+      },
+      {
+        "after": "e7",
+        "before": "e8"
+      },
+      {
+        "after": "e8",
+        "before": "e9"
+      }
+    ]
+  }
+}

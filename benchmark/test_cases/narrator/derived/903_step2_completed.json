@@ -1,0 +1,103 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "bend forward",
+    "brush teeth",
+    "crawl",
+    "drink",
+    "eat",
+    "get up",
+    "kick",
+    "kneel down",
+    "lie down",
+    "listen to music",
+    "maintain bend",
+    "maintain kneel",
+    "maintain lie",
+    "maintain sit",
+    "maintain squat",
+    "pick up",
+    "play drums",
+    "play game",
+    "play guitar",
+    "play piano",
+    "punch",
+    "put down",
+    "read",
+    "rotate",
+    "sit down",
+    "squat down",
+    "stand still",
+    "stand up",
+    "straighten up",
+    "swing",
+    "take photo",
+    "take shower",
+    "talk on",
+    "toss",
+    "turn left",
+    "turn on",
+    "turn right",
+    "type on",
+    "wash",
+    "wave",
+    "write"
+  ],
+  "user_instruction": "Amir is the waiter and Benjamin is the customer. Amir picks up a bottle near the bar and socializing area. Benjamin sits on the chair in the dining area. Amir hands over the bottle to Benjamin near where Benjamin is sitting. After that, Amir go back to pick up another bottle and Benjamin drinks the bottle.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "hand over",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "receive",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin"
+  ],
+  "expected_next_event": {
+    "characters": [
+      "Amir",
+      "Benjamin"
+    ]
+  }
+}

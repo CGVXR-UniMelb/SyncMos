@@ -1,0 +1,45 @@
+{
+  "id": 1002,
+  "difficulty": "simple",
+  "tags": [
+    "synchronization",
+    "parallel",
+    "simple",
+    "two_characters"
+  ],
+  "scene_name": "Office",
+  "action_labels": [
+    "drink",
+    "type on",
+    "stand still"
+  ],
+  "user_instruction": "Amir drinks coffee at his desk while Benjamin types on his laptop at another desk. Both activities happen simultaneously.",
+  "characters": [
+    "Amir",
+    "Benjamin"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "drink coffee at desk"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "type on laptop at desk"
+      }
+    ],
+    "dependencies": [
+      {
+        "parallel": [
+          "e1",
+          "e2"
+        ]
+      }
+    ]
+  }
+}

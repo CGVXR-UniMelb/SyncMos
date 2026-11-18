@@ -1,0 +1,41 @@
+scene_name: 0cac755a-8d6f-2d13-8fed-b1be02f4ef77 # lounge
+action_labels:
+  - idle
+  - walk
+  - sit down
+  - stand up
+  - work
+  - use_computer
+
+event:
+  characters: [Bob]
+  activity: sit down on chair_9
+
+characters:
+  - name: Bob
+    state: idle
+    current_action: idle
+    position: []
+    orientation: []
+
+previous_events: []
+
+response: |
+  ```python
+  def parse_event():
+    # Bob needs to sit down on a specific chair
+    bob = get_character("Bob")
+    
+    # For sitting on furniture, use get_area_to_sit_on with the chair object
+    # This ensures Bob positions himself correctly to sit on the chair
+    bob_position = get_area_to_sit_on("chair_9")
+    
+    # The target action is 'sit down' from the available actions
+    bob_action = "sit down"
+    
+    # Bob doesn't need a specific orientation when sitting
+    bob.set_position(bob_position)
+    bob.set_target_action(bob_action)
+    
+    return [bob]
+  ```

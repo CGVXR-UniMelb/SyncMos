@@ -1,0 +1,71 @@
+{
+  "id": 907,
+  "tags": [
+    "dependency",
+    "object_chain"
+  ],
+  "scene_name": "House",
+  "action_labels": [
+    "pick up",
+    "put down",
+    "hand over",
+    "receive"
+  ],
+  "user_instruction": "Amir picks up bottle_1 from table_4 and puts it on cabinet_1. Benjamin picks up bottle_1 from cabinet_1 and hands it over to Charles. Charles receives bottle_1.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "pick up bottle_1 from table_4"
+      },
+      {
+        "event_id": "e2",
+        "character": "Amir",
+        "activity": "put down bottle_1 on cabinet_1"
+      },
+      {
+        "event_id": "e3",
+        "character": "Benjamin",
+        "activity": "pick up bottle_1 from cabinet_1"
+      },
+      {
+        "event_id": "e4",
+        "character": "Benjamin",
+        "activity": "hand over bottle_1"
+      },
+      {
+        "event_id": "e5",
+        "character": "Charles",
+        "activity": "receive bottle_1"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e1",
+        "before": "e2"
+      },
+      {
+        "after": "e2",
+        "before": "e3"
+      },
+      {
+        "after": "e3",
+        "before": "e4"
+      },
+      {
+        "parallel": [
+          "e4",
+          "e5"
+        ]
+      }
+    ]
+  }
+}

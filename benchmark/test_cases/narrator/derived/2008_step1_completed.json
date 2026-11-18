@@ -1,0 +1,35 @@
+{
+  "scene_name": "Office",
+  "action_labels": [
+    "pick up",
+    "hand over",
+    "put down",
+    "receive"
+  ],
+  "user_instruction": "Amir picks up a document and hands it to Benjamin. Benjamin hands it to Charles. Charles hands it to David. David puts it down on the desk.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up ",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin",
+    "Charles",
+    "David"
+  ],
+  "expected_next_event": {
+    "characters": [
+      "Amir",
+      "Benjamin"
+    ]
+  }
+}

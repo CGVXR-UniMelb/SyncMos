@@ -1,0 +1,105 @@
+{
+  "id": 2008,
+  "difficulty": "medium",
+  "tags": [
+    "dependency",
+    "chain",
+    "medium",
+    "four_characters"
+  ],
+  "scene_name": "Office",
+  "action_labels": [
+    "pick up",
+    "hand over",
+    "put down"
+  ],
+  "user_instruction": "Amir picks up a document and hands it to Benjamin. Benjamin hands it to Charles. Charles hands it to David. David puts it down on the desk.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles",
+    "David"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "pick up document"
+      },
+      {
+        "event_id": "e2",
+        "character": "Amir",
+        "activity": "hand over document to Benjamin"
+      },
+      {
+        "event_id": "e3",
+        "character": "Benjamin",
+        "activity": "receive document from Amir"
+      },
+      {
+        "event_id": "e4",
+        "character": "Benjamin",
+        "activity": "hand over document to Charles"
+      },
+      {
+        "event_id": "e5",
+        "character": "Charles",
+        "activity": "receive document from Benjamin"
+      },
+      {
+        "event_id": "e6",
+        "character": "Charles",
+        "activity": "hand over document to David"
+      },
+      {
+        "event_id": "e7",
+        "character": "David",
+        "activity": "receive document from Charles"
+      },
+      {
+        "event_id": "e8",
+        "character": "David",
+        "activity": "put down document on desk"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e1",
+        "before": "e2"
+      },
+      {
+        "parallel": [
+          "e2",
+          "e3"
+        ]
+      },
+      {
+        "after": "e3",
+        "before": "e4"
+      },
+      {
+        "parallel": [
+          "e4",
+          "e5"
+        ]
+      },
+      {
+        "after": "e5",
+        "before": "e6"
+      },
+      {
+        "parallel": [
+          "e6",
+          "e7"
+        ]
+      },
+      {
+        "after": "e7",
+        "before": "e8"
+      }
+    ]
+  }
+}

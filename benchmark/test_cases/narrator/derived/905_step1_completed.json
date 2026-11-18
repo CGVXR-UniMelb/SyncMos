@@ -1,0 +1,33 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "pick up",
+    "hand over",
+    "receive",
+    "put down"
+  ],
+  "user_instruction": "Amir picks up bottle_1 from table_4. Then Amir hands over bottle_1 to Benjamin. Benjamin receives bottle_1.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up bottle_1 from table_4",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin"
+  ],
+  "expected_next_event": {
+    "characters": [
+      "Amir",
+      "Benjamin"
+    ]
+  }
+}

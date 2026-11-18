@@ -1,0 +1,98 @@
+{
+  "id": 916,
+  "tags": [
+    "dependency",
+    "house",
+    "hhi",
+    "social",
+    "greeting"
+  ],
+  "scene_name": "House",
+  "action_labels": [
+    "handshake",
+    "hug",
+    "wave",
+    "highfive",
+    "sit down"
+  ],
+  "user_instruction": "Amir walks forward to Benjamin and shakes hands. After the handshake, Benjamin hugs Amir. Then both Amir and Benjamin wave to Charles. After the wave, Charles gives highfive to both Amir and Benjamin.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e2",
+        "character": "Amir",
+        "activity": "handshake"
+      },
+      {
+        "event_id": "e3",
+        "character": "Benjamin",
+        "activity": "handshake"
+      },
+      {
+        "event_id": "e4",
+        "character": "Benjamin",
+        "activity": "hug"
+      },
+      {
+        "event_id": "e5",
+        "character": "Amir",
+        "activity": "wave"
+      },
+      {
+        "event_id": "e6",
+        "character": "Benjamin",
+        "activity": "wave"
+      },
+      {
+        "event_id": "e7",
+        "character": "Charles",
+        "activity": "highfive"
+      }
+    ],
+    "dependencies": [
+      {
+        "parallel": [
+          "e2",
+          "e3"
+        ]
+      },
+      {
+        "after": "e2",
+        "before": "e4"
+      },
+      {
+        "after": "e3",
+        "before": "e4"
+      },
+      {
+        "after": "e4",
+        "before": "e5"
+      },
+      {
+        "after": "e4",
+        "before": "e6"
+      },
+      {
+        "parallel": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "after": "e5",
+        "before": "e7"
+      },
+      {
+        "after": "e6",
+        "before": "e7"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "stand still",
+    "bend forward",
+    "straighten up",
+    "kneel down",
+    "get up",
+    "squat down",
+    "stand up"
+  ],
+  "user_instruction": "Amir stands still, then bends forward. After bending, Amir straightens up, then kneels down. After kneeling, Amir gets up, then squats down. Finally, Amir stands up.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "stand still",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "bend forward",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "straighten up",
+      "details": []
+    }
+  ],
+  "available_characters": [],
+  "expected_next_event": {}
+}

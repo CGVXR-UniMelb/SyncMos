@@ -1,0 +1,41 @@
+{
+  "id": 1010,
+  "difficulty": "medium",
+  "tags": ["synchronization", "parallel", "medium", "four_characters"],
+  "scene_name": "Restaurant",
+  "action_labels": ["sit down", "eat", "drink", "talk on", "wave", "stand up"],
+  "user_instruction": "In the restaurant, Amir and Benjamin sit at one table while Charles and David sit at another table. All four sit down simultaneously. Amir eats, Benjamin drinks, Charles talks on phone, David waves. Then all stand up together.",
+  "characters": ["Amir", "Benjamin", "Charles", "David"],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {"event_id": "e1", "character": "Amir", "activity": "sit down"},
+      {"event_id": "e2", "character": "Benjamin", "activity": "sit down"},
+      {"event_id": "e3", "character": "Charles", "activity": "sit down"},
+      {"event_id": "e4", "character": "David", "activity": "sit down"},
+      {"event_id": "e5", "character": "Amir", "activity": "eat"},
+      {"event_id": "e6", "character": "Benjamin", "activity": "drink"},
+      {"event_id": "e7", "character": "Charles", "activity": "talk on"},
+      {"event_id": "e8", "character": "David", "activity": "wave"},
+      {"event_id": "e9", "character": "Amir", "activity": "stand up"},
+      {"event_id": "e10", "character": "Benjamin", "activity": "stand up"},
+      {"event_id": "e11", "character": "Charles", "activity": "stand up"},
+      {"event_id": "e12", "character": "David", "activity": "stand up"}
+    ],
+    "dependencies": [
+      {"parallel": ["e1", "e2", "e3", "e4"]},
+      {"after": "e1", "before": "e5"},
+      {"after": "e2", "before": "e6"},
+      {"after": "e3", "before": "e7"},
+      {"after": "e4", "before": "e8"},
+      {"parallel": ["e5", "e6", "e7", "e8"]},
+      {"after": "e5", "before": "e9"},
+      {"after": "e6", "before": "e10"},
+      {"after": "e7", "before": "e11"},
+      {"after": "e8", "before": "e12"},
+      {"parallel": ["e9", "e10", "e11", "e12"]}
+    ]
+  }
+}
+

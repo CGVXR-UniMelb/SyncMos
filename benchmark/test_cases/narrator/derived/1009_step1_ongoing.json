@@ -1,0 +1,48 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "pick up",
+    "drink",
+    "eat",
+    "put down",
+    "wave"
+  ],
+  "user_instruction": "Amir picks up a bottle and drinks, Benjamin picks up food and eats, Charles picks up a book and reads. All three do their activities simultaneously. Then they wave to each other and put down their items at the same time.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "pick up",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "pick up",
+      "details": []
+    }
+  ],
+  "available_characters": [],
+  "expected_next_event": {}
+}

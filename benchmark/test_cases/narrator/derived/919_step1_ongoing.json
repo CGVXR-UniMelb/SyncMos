@@ -1,0 +1,40 @@
+{
+  "scene_name": "Office",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "pick up",
+    "put down",
+    "write",
+    "read",
+    "type on",
+    "take photo"
+  ],
+  "user_instruction": "Amir sits on chair_1 and picks up document_1 from desk_1. Benjamin sits on chair_2 and picks up document_2 from desk_2. After both pick up documents, Amir reads document_1 while Benjamin writes on document_2. After both finish, Amir takes photo of document_1 and Benjamin types on laptop_1.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down on chair_1",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down on chair_2",
+      "details": []
+    }
+  ],
+  "available_characters": [],
+  "expected_next_event": {}
+}

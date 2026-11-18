@@ -1,0 +1,212 @@
+{
+  "scene_name": "Office",
+  "action_labels": [
+    "pick up",
+    "hand over",
+    "read",
+    "sign",
+    "put down",
+    "receive"
+  ],
+  "user_instruction": "A document approval chain: Amir picks up a document and reads it, then hands it to Benjamin. Benjamin reads and signs it, then hands it to Charles. Charles reads and signs it, then hands it to David. David reads and signs it, then hands it to Evan. Evan reads it and puts it down on the desk.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "pick up ",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "read ",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "hand over",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "receive",
+      "details": []
+    },
+    {
+      "idx": 4,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "read",
+      "details": []
+    },
+    {
+      "idx": 5,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sign",
+      "details": []
+    },
+    {
+      "idx": 6,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "hand over",
+      "details": []
+    },
+    {
+      "idx": 7,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "receive",
+      "details": []
+    },
+    {
+      "idx": 8,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "read",
+      "details": []
+    },
+    {
+      "idx": 9,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "sign",
+      "details": []
+    },
+    {
+      "idx": 10,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "hand over",
+      "details": []
+    },
+    {
+      "idx": 11,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "David"
+      ],
+      "activity": "receive",
+      "details": []
+    },
+    {
+      "idx": 12,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "David"
+      ],
+      "activity": "read",
+      "details": []
+    },
+    {
+      "idx": 13,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "David"
+      ],
+      "activity": "sign",
+      "details": []
+    },
+    {
+      "idx": 14,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "David"
+      ],
+      "activity": "hand over",
+      "details": []
+    },
+    {
+      "idx": 15,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Evan"
+      ],
+      "activity": "receive",
+      "details": []
+    },
+    {
+      "idx": 16,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Evan"
+      ],
+      "activity": "read ",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin",
+    "Charles",
+    "David",
+    "Evan"
+  ],
+  "expected_next_event": {
+    "character": "Evan",
+    "activity": "put down"
+  }
+}

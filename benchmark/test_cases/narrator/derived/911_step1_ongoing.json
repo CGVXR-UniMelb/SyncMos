@@ -1,0 +1,26 @@
+{
+  "scene_name": "Office",
+  "action_labels": [
+    "sit down",
+    "type on"
+  ],
+  "user_instruction": "Amir sits on chair_10. After Amir is seated, Benjamin sits on chair_12 and Charles sits on chair_14. Then Benjamin and Charles start typing on laptop_6 and laptop_5.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down on chair_10",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_next_event": {}
+}

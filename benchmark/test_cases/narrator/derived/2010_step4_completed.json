@@ -1,0 +1,67 @@
+{
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "sit down",
+    "eat",
+    "drink",
+    "wave",
+    "stand up"
+  ],
+  "user_instruction": "Amir sits down and eats. After Amir finishes eating, Benjamin sits down and drinks. After Benjamin finishes drinking, Charles sits down and eats. After Charles finishes, David waves to everyone, then all three people who are sitting stand up in order: Amir, Benjamin, then Charles.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "eat ",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "drink",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin",
+    "Charles",
+    "David"
+  ],
+  "expected_next_event": {
+    "character": "Charles",
+    "activity": "sit down"
+  }
+}

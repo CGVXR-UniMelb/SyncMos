@@ -1,0 +1,53 @@
+scene_name: 0cac755a-8d6f-2d13-8fed-b1be02f4ef77 # lounge
+action_labels:
+  - idle
+  - walk
+  - pick up
+  - put down
+  - sit down
+  - stand up
+
+event:
+  characters: [Bob]
+  activity: pick up the bottle from the table
+
+characters:
+  - name: Bob
+    state: interacting
+    current_action: sit down
+    position:
+      - sit on chair_9
+    orientation:
+      - look at table_4
+
+previous_events:
+  - characters: [Bob]
+    activity: sit down on chair_9
+    state: done
+    parsed:
+      - character: Bob
+        target_action: sit down
+        position:
+          - sit on chair_9
+
+response: |
+  ```python
+  def parse_event():
+    # Bob needs to pick up the bottle from the table while sitting on chair_9
+    bob = get_character("Bob")
+    
+    # Bob is already sitting on chair_9, so he should maintain that position
+    # The system will understand he's reaching from his seated position
+    bob_position = get_area_to_sit_on("chair_9")
+    
+    # The target action is 'pick up' from the available actions
+    bob_action = "pick up"
+    
+    # Bob should look at the table where the bottle is located
+    # This helps orient his reach toward the correct object
+    bob.set_position(bob_position)
+    bob.set_orientation("table_4")
+    bob.set_target_action(bob_action)
+    
+    return [bob]
+  ```

@@ -1,0 +1,63 @@
+{
+  "scene_name": "House",
+  "action_labels": [
+    "sit down",
+    "stand up",
+    "pick up",
+    "put down",
+    "drink",
+    "eat",
+    "read",
+    "type on",
+    "wave"
+  ],
+  "user_instruction": "Four people coordinate complex parallel activities. Amir sits, picks up bottle, drinks, puts down, waves, and stands. Benjamin sits, picks up food, eats, puts down, waves, and stands. Charles sits, picks up book, reads, puts down, waves, and stands. David sits, types on laptop, stops typing, waves, and stands. All corresponding actions happen simultaneously across all four people.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "David"
+      ],
+      "activity": "sit down",
+      "details": []
+    }
+  ],
+  "available_characters": [],
+  "expected_next_event": {}
+}

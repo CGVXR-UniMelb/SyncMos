@@ -1,0 +1,108 @@
+{
+  "id": 903,
+  "scene_name": "House",
+  "characters": [
+    "Amir",
+    "Benjamin"
+  ],
+  "action_labels": [
+    "bend forward",
+    "brush teeth",
+    "crawl",
+    "drink",
+    "eat",
+    "get up",
+    "kick",
+    "kneel down",
+    "lie down",
+    "listen to music",
+    "maintain bend",
+    "maintain kneel",
+    "maintain lie",
+    "maintain sit",
+    "maintain squat",
+    "pick up",
+    "play drums",
+    "play game",
+    "play guitar",
+    "play piano",
+    "punch",
+    "put down",
+    "read",
+    "rotate",
+    "sit down",
+    "squat down",
+    "stand still",
+    "stand up",
+    "straighten up",
+    "swing",
+    "take photo",
+    "take shower",
+    "talk on",
+    "toss",
+    "turn left",
+    "turn on",
+    "turn right",
+    "type on",
+    "wash",
+    "wave",
+    "write"
+  ],
+  "user_instruction": "Amir is the waiter and Benjamin is the customer. Amir picks up a bottle near the bar and socializing area. Benjamin sits on the chair in the dining area. Amir hands over the bottle to Benjamin near where Benjamin is sitting. After that, Amir go back to pick up another bottle and Benjamin drinks the bottle.",
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "pick up"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "sit down"
+      },
+      {
+        "event_id": "e3",
+        "character": "Amir",
+        "activity": "hand over"
+      },
+      {
+        "event_id": "e4",
+        "character": "Benjamin",
+        "activity": "receive"
+      },
+      {
+        "event_id": "e5",
+        "character": "Benjamin",
+        "activity": "drink"
+      },
+      {
+        "event_id": "e6",
+        "character": "Amir",
+        "activity": "pick up"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e1",
+        "before": "e3"
+      },
+      {
+        "parallel": [
+          "e3",
+          "e4"
+        ]
+      },
+      {
+        "after": "e3",
+        "before": "e6"
+      },
+      {
+        "after": "e4",
+        "before": "e5"
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+scene_name: 4138585b-a238-2435-810b-9728fc989b2f # kitchen
+action_labels:
+  - idle
+  - walk
+  - pick up
+  - put down
+  - receive
+
+event:
+  characters: [Jack]
+  activity: receive the bottle near platform_2
+
+characters:
+  - name: Jack
+    state: idle
+    current_action: idle
+    position:
+      - close to platform_2
+    orientation: []
+  - name: Bob
+    state: interacting
+    current_action: put down
+    position:
+      - adjacent to platform_2
+    orientation:
+      - look at Jack
+
+previous_events:
+  - characters: [Bob]
+    activity: hand over the bottle near platform_2
+    state: done
+    parsed:
+      - character: Bob
+        target_action: put down
+        position:
+          - adjacent to platform_2
+        orientation:
+          - look at Jack
+
+response: |
+  ```python
+  def parse_event():
+    # Jack needs to receive the bottle from Bob near the platform
+    # Note: 'receive' may not be in available actions, so we use 'pick up'
+    jack = get_character("Jack")
+    
+    # Jack should position himself near the platform on the opposite side from Bob
+    # to avoid collision while receiving the bottle
+    jack_position = get_area_adjacent_to("platform_2")
+    
+    # Since 'receive' is typically not in available actions,
+    # we use 'pick up' to represent taking the bottle
+    jack_action = "pick up"
+    
+    # Jack should look at Bob who is handing over the bottle
+    jack.set_position(jack_position)
+    jack.set_orientation("Bob")
+    jack.set_target_action(jack_action)
+    
+    return [jack]
+  ```

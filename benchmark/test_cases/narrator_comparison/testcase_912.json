@@ -1,0 +1,63 @@
+{
+  "id": 912,
+  "tags": [
+    "dependency",
+    "restaurant",
+    "parallel",
+    "service"
+  ],
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "pick up",
+    "put down",
+    "hand over",
+    "receive"
+  ],
+  "user_instruction": "Amir picks up bottle_1 from bar_counter_1 and Benjamin picks up bottle_2 from bar_counter_1 at the same time. Then Amir puts bottle_1 on table_1 and Benjamin puts bottle_2 on table_4.",
+  "characters": [
+    "Amir",
+    "Benjamin"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "pick up bottle_1 from bar_counter_1"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "pick up bottle_2 from bar_counter_1"
+      },
+      {
+        "event_id": "e3",
+        "character": "Amir",
+        "activity": "put down bottle_1 on table_1"
+      },
+      {
+        "event_id": "e4",
+        "character": "Benjamin",
+        "activity": "put down bottle_2 on table_4"
+      }
+    ],
+    "dependencies": [
+      {
+        "parallel": [
+          "e1",
+          "e2"
+        ]
+      },
+      {
+        "after": "e1",
+        "before": "e3"
+      },
+      {
+        "after": "e2",
+        "before": "e4"
+      }
+    ]
+  }
+}

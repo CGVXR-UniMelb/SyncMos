@@ -1,0 +1,37 @@
+{
+  "id": 2010,
+  "difficulty": "medium",
+  "tags": ["dependency", "coordination", "medium", "four_characters"],
+  "scene_name": "Restaurant",
+  "action_labels": ["sit down", "eat", "drink", "wave", "stand up"],
+  "user_instruction": "Amir sits down and eats. After Amir finishes eating, Benjamin sits down and drinks. After Benjamin finishes drinking, Charles sits down and eats. After Charles finishes, David waves to everyone, then all three people who are sitting stand up in order: Amir, Benjamin, then Charles.",
+  "characters": ["Amir", "Benjamin", "Charles", "David"],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {"event_id": "e1", "character": "Amir", "activity": "sit down"},
+      {"event_id": "e2", "character": "Amir", "activity": "eat "},
+      {"event_id": "e3", "character": "Benjamin", "activity": "sit down"},
+      {"event_id": "e4", "character": "Benjamin", "activity": "drink"},
+      {"event_id": "e5", "character": "Charles", "activity": "sit down"},
+      {"event_id": "e6", "character": "Charles", "activity": "eat"},
+      {"event_id": "e7", "character": "David", "activity": "wave"},
+      {"event_id": "e8", "character": "Amir", "activity": "stand up"},
+      {"event_id": "e9", "character": "Benjamin", "activity": "stand up"},
+      {"event_id": "e10", "character": "Charles", "activity": "stand up"}
+    ],
+    "dependencies": [
+      {"after": "e1", "before": "e2"},
+      {"after": "e2", "before": "e3"},
+      {"after": "e3", "before": "e4"},
+      {"after": "e4", "before": "e5"},
+      {"after": "e5", "before": "e6"},
+      {"after": "e6", "before": "e7"},
+      {"after": "e7", "before": "e8"},
+      {"after": "e8", "before": "e9"},
+      {"after": "e9", "before": "e10"}
+    ]
+  }
+}
+

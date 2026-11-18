@@ -1,0 +1,52 @@
+{
+  "id": 2004,
+  "difficulty": "simple",
+  "tags": [
+    "dependency",
+    "sequential",
+    "simple",
+    "two_characters"
+  ],
+  "scene_name": "House",
+  "action_labels": [
+    "turn on",
+    "read",
+    "turn off"
+  ],
+  "user_instruction": "Amir turns on the light. After the light is on, Benjamin reads a book. After Benjamin finishes reading, Amir turns off the light.",
+  "characters": [
+    "Amir",
+    "Benjamin"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "turn on light"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "read book"
+      },
+      {
+        "event_id": "e3",
+        "character": "Amir",
+        "activity": "turn off light"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e1",
+        "before": "e2"
+      },
+      {
+        "after": "e2",
+        "before": "e3"
+      }
+    ]
+  }
+}

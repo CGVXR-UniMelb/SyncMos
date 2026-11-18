@@ -1,0 +1,179 @@
+{
+  "id": 1012,
+  "difficulty": "complex",
+  "tags": [
+    "synchronization",
+    "parallel",
+    "complex",
+    "five_characters"
+  ],
+  "scene_name": "House",
+  "action_labels": [
+    "pick up",
+    "drink",
+    "eat",
+    "read",
+    "listen to music",
+    "put down",
+    "turn on",
+    "turn off"
+  ],
+  "user_instruction": "Five people perform different activities in the house simultaneously. Amir picks up a bottle and drinks, Benjamin picks up food and eats, Charles picks up a book and reads, David turns on music and listens, Evan picks up a phone and talks. After their activities, they all put down their items or turn off devices at the same time.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles",
+    "David",
+    "Evan"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "pick up bottle"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "pick up food"
+      },
+      {
+        "event_id": "e3",
+        "character": "Charles",
+        "activity": "pick up book"
+      },
+      {
+        "event_id": "e4",
+        "character": "David",
+        "activity": "turn on music player"
+      },
+      {
+        "event_id": "e5",
+        "character": "Evan",
+        "activity": "pick up phone"
+      },
+      {
+        "event_id": "e6",
+        "character": "Amir",
+        "activity": "drink from bottle"
+      },
+      {
+        "event_id": "e7",
+        "character": "Benjamin",
+        "activity": "eat food"
+      },
+      {
+        "event_id": "e8",
+        "character": "Charles",
+        "activity": "read book"
+      },
+      {
+        "event_id": "e9",
+        "character": "David",
+        "activity": "listen to music"
+      },
+      {
+        "event_id": "e10",
+        "character": "Evan",
+        "activity": "talk on phone"
+      },
+      {
+        "event_id": "e11",
+        "character": "Amir",
+        "activity": "put down bottle"
+      },
+      {
+        "event_id": "e12",
+        "character": "Benjamin",
+        "activity": "put down food"
+      },
+      {
+        "event_id": "e13",
+        "character": "Charles",
+        "activity": "put down book"
+      },
+      {
+        "event_id": "e14",
+        "character": "David",
+        "activity": "turn off music player"
+      },
+      {
+        "event_id": "e15",
+        "character": "Evan",
+        "activity": "put down phone"
+      }
+    ],
+    "dependencies": [
+      {
+        "parallel": [
+          "e1",
+          "e2",
+          "e3",
+          "e4",
+          "e5"
+        ]
+      },
+      {
+        "after": "e1",
+        "before": "e6"
+      },
+      {
+        "after": "e2",
+        "before": "e7"
+      },
+      {
+        "after": "e3",
+        "before": "e8"
+      },
+      {
+        "after": "e4",
+        "before": "e9"
+      },
+      {
+        "after": "e5",
+        "before": "e10"
+      },
+      {
+        "parallel": [
+          "e6",
+          "e7",
+          "e8",
+          "e9",
+          "e10"
+        ]
+      },
+      {
+        "after": "e6",
+        "before": "e11"
+      },
+      {
+        "after": "e7",
+        "before": "e12"
+      },
+      {
+        "after": "e8",
+        "before": "e13"
+      },
+      {
+        "after": "e9",
+        "before": "e14"
+      },
+      {
+        "after": "e10",
+        "before": "e15"
+      },
+      {
+        "parallel": [
+          "e11",
+          "e12",
+          "e13",
+          "e14",
+          "e15"
+        ]
+      }
+    ]
+  }
+}

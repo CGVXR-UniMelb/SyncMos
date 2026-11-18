@@ -1,0 +1,121 @@
+{
+  "scene_name": "Office",
+  "action_labels": [
+    "sit down",
+    "type on",
+    "turn on",
+    "read",
+    "talk on",
+    "wave",
+    "stand up"
+  ],
+  "user_instruction": "Complex branching dependencies: Amir sits and types a document. After Amir finishes typing, Benjamin and Charles both start working independently - Benjamin turns on his computer and reads, while Charles talks on the phone. After Benjamin finishes reading AND Charles finishes the call, David waves to signal everyone. After David waves, Evan sits down and types. After Evan finishes typing, everyone stands up in sequence: Amir, Benjamin, Charles, David, then Evan.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "type",
+      "details": []
+    },
+    {
+      "idx": 2,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "turn on",
+      "details": []
+    },
+    {
+      "idx": 3,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Charles"
+      ],
+      "activity": "talk",
+      "details": []
+    },
+    {
+      "idx": 4,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "read",
+      "details": []
+    },
+    {
+      "idx": 5,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "David"
+      ],
+      "activity": "wave",
+      "details": []
+    },
+    {
+      "idx": 6,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Evan"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 7,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Evan"
+      ],
+      "activity": "type",
+      "details": []
+    },
+    {
+      "idx": 8,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "ongoing",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "stand up",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Benjamin",
+    "Charles",
+    "David",
+    "Evan"
+  ],
+  "expected_next_event": {}
+}

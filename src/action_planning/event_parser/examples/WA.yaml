@@ -1,0 +1,41 @@
+scene_name: 4138585b-a238-2435-810b-9728fc989b2f # kitchen
+action_labels:
+  - idle
+  - walk
+  - pick up
+  - put down
+  - cook
+  - open_fridge
+
+event:
+  characters: [Carol]
+  activity: walk to the kitchen area
+
+characters:
+  - name: Carol
+    state: idle
+    current_action: idle
+    position: []
+    orientation: []
+
+previous_events: []
+
+response: |
+  ```python
+  def parse_event():
+    # Carol needs to walk to the kitchen area
+    carol = get_character("Carol")
+    
+    # For walking to a general area, we can use area close to a central kitchen object
+    # This positions Carol somewhere in the kitchen area
+    carol_position = get_area_close_to("counter_1")
+    
+    # The target action is 'walk' from the available actions
+    carol_action = "walk"
+    
+    # Carol doesn't need a specific orientation for general walking
+    carol.set_position(carol_position)
+    carol.set_target_action(carol_action)
+    
+    return [carol]
+  ```

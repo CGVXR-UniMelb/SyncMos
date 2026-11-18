@@ -1,0 +1,57 @@
+{
+  "id": 1013,
+  "difficulty": "complex",
+  "tags": ["synchronization", "parallel", "complex", "five_characters"],
+  "scene_name": "Restaurant",
+  "action_labels": ["sit down", "eat", "drink", "wave", "talk on", "read", "stand up"],
+  "user_instruction": "Five customers arrive at the restaurant and sit at different tables simultaneously. Each performs different activities: Amir eats and drinks, Benjamin talks on phone and waves, Charles reads menu and eats, David drinks and waves, Evan eats and talks on phone. After their meals, all five stand up at the same time.",
+  "characters": ["Amir", "Benjamin", "Charles", "David", "Evan"],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {"event_id": "e1", "character": "Amir", "activity": "sit down"},
+      {"event_id": "e2", "character": "Benjamin", "activity": "sit down"},
+      {"event_id": "e3", "character": "Charles", "activity": "sit down"},
+      {"event_id": "e4", "character": "David", "activity": "sit down"},
+      {"event_id": "e5", "character": "Evan", "activity": "sit down"},
+      {"event_id": "e6", "character": "Amir", "activity": "eat"},
+      {"event_id": "e7", "character": "Benjamin", "activity": "talk on"},
+      {"event_id": "e8", "character": "Charles", "activity": "read"},
+      {"event_id": "e9", "character": "David", "activity": "drink"},
+      {"event_id": "e10", "character": "Evan", "activity": "eat"},
+      {"event_id": "e11", "character": "Amir", "activity": "drink"},
+      {"event_id": "e12", "character": "Benjamin", "activity": "wave"},
+      {"event_id": "e13", "character": "Charles", "activity": "eat"},
+      {"event_id": "e14", "character": "David", "activity": "wave"},
+      {"event_id": "e15", "character": "Evan", "activity": "talk on"},
+      {"event_id": "e16", "character": "Amir", "activity": "stand up"},
+      {"event_id": "e17", "character": "Benjamin", "activity": "stand up"},
+      {"event_id": "e18", "character": "Charles", "activity": "stand up"},
+      {"event_id": "e19", "character": "David", "activity": "stand up"},
+      {"event_id": "e20", "character": "Evan", "activity": "stand up"}
+    ],
+    "dependencies": [
+      {"parallel": ["e1", "e2", "e3", "e4", "e5"]},
+      {"after": "e1", "before": "e6"},
+      {"after": "e2", "before": "e7"},
+      {"after": "e3", "before": "e8"},
+      {"after": "e4", "before": "e9"},
+      {"after": "e5", "before": "e10"},
+      {"parallel": ["e6", "e7", "e8", "e9", "e10"]},
+      {"after": "e6", "before": "e11"},
+      {"after": "e7", "before": "e12"},
+      {"after": "e8", "before": "e13"},
+      {"after": "e9", "before": "e14"},
+      {"after": "e10", "before": "e15"},
+      {"parallel": ["e11", "e12", "e13", "e14", "e15"]},
+      {"after": "e11", "before": "e16"},
+      {"after": "e12", "before": "e17"},
+      {"after": "e13", "before": "e18"},
+      {"after": "e14", "before": "e19"},
+      {"after": "e15", "before": "e20"},
+      {"parallel": ["e16", "e17", "e18", "e19", "e20"]}
+    ]
+  }
+}
+

@@ -1,0 +1,60 @@
+{
+  "id": 1007,
+  "difficulty": "medium",
+  "tags": [
+    "synchronization",
+    "parallel",
+    "medium",
+    "four_characters"
+  ],
+  "scene_name": "House",
+  "action_labels": [
+    "play guitar",
+    "play piano",
+    "play drums",
+    "listen to music"
+  ],
+  "user_instruction": "A band is practicing in the house. Amir plays guitar, Benjamin plays piano, Charles plays drums, and David listens to the music. All four activities happen simultaneously.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles",
+    "David"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "play guitar"
+      },
+      {
+        "event_id": "e2",
+        "character": "Benjamin",
+        "activity": "play piano"
+      },
+      {
+        "event_id": "e3",
+        "character": "Charles",
+        "activity": "play drums"
+      },
+      {
+        "event_id": "e4",
+        "character": "David",
+        "activity": "listen to music"
+      }
+    ],
+    "dependencies": [
+      {
+        "parallel": [
+          "e1",
+          "e2",
+          "e3",
+          "e4"
+        ]
+      }
+    ]
+  }
+}

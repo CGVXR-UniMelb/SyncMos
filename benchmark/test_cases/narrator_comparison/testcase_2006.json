@@ -1,0 +1,103 @@
+{
+  "id": 2006,
+  "difficulty": "medium",
+  "tags": [
+    "dependency",
+    "chain",
+    "medium",
+    "three_characters"
+  ],
+  "scene_name": "House",
+  "action_labels": [
+    "pick up",
+    "hand over",
+    "drink",
+    "put down"
+  ],
+  "user_instruction": "Amir picks up a bottle and hands it to Benjamin. Benjamin drinks from the bottle and then hands it to Charles. Charles drinks from the bottle and puts it down.",
+  "characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_timeline": {
+    "time_unit": "frames",
+    "start_at": "0",
+    "events": [
+      {
+        "event_id": "e1",
+        "character": "Amir",
+        "activity": "pick up bottle"
+      },
+      {
+        "event_id": "e2",
+        "character": "Amir",
+        "activity": "hand over bottle to Benjamin"
+      },
+      {
+        "event_id": "e3",
+        "character": "Benjamin",
+        "activity": "receive bottle from Amir"
+      },
+      {
+        "event_id": "e4",
+        "character": "Benjamin",
+        "activity": "drink from bottle"
+      },
+      {
+        "event_id": "e5",
+        "character": "Benjamin",
+        "activity": "hand over bottle to Charles"
+      },
+      {
+        "event_id": "e6",
+        "character": "Charles",
+        "activity": "receive bottle from Benjamin"
+      },
+      {
+        "event_id": "e7",
+        "character": "Charles",
+        "activity": "drink from bottle"
+      },
+      {
+        "event_id": "e8",
+        "character": "Charles",
+        "activity": "put down bottle"
+      }
+    ],
+    "dependencies": [
+      {
+        "after": "e1",
+        "before": "e2"
+      },
+      {
+        "parallel": [
+          "e2",
+          "e3"
+        ]
+      },
+      {
+        "after": "e3",
+        "before": "e4"
+      },
+      {
+        "after": "e4",
+        "before": "e5"
+      },
+      {
+        "parallel": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "after": "e6",
+        "before": "e7"
+      },
+      {
+        "after": "e7",
+        "before": "e8"
+      }
+    ]
+  }
+}

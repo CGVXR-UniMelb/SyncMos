@@ -1,0 +1,43 @@
+{
+  "scene_name": "Restaurant",
+  "action_labels": [
+    "sit down",
+    "wave",
+    "stand up",
+    "walk"
+  ],
+  "user_instruction": "Amir and Benjamin sit at a table. After both are seated, Charles waves to them from another table. After Charles waves, Amir and Benjamin stand up and walk to Charles at the same time.",
+  "planning_history": [
+    {
+      "idx": 0,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Amir"
+      ],
+      "activity": "sit down",
+      "details": []
+    },
+    {
+      "idx": 1,
+      "type": "actor",
+      "distraction_level": 0,
+      "state": "completed",
+      "characters": [
+        "Benjamin"
+      ],
+      "activity": "sit down",
+      "details": []
+    }
+  ],
+  "available_characters": [
+    "Amir",
+    "Benjamin",
+    "Charles"
+  ],
+  "expected_next_event": {
+    "character": "Charles",
+    "activity": "wave"
+  }
+}
